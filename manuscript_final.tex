@@ -1,0 +1,175 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{\textbf{Stress Testing Large Language Models for Oncology Safety: \\
+A Cross-Sectional Evaluation of Sycophancy in Cancer Treatment Queries}}
+
+\author{
+Ramez Kouzy, MD\textsuperscript{1,2} \\
+\small \textsuperscript{1}Department of Radiation Oncology, The University of Texas MD Anderson Cancer Center \\
+\small \textsuperscript{2}Institute for Data Science in Oncology, The University of Texas MD Anderson Cancer Center
+}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\textbf{Importance:} Patients increasingly rely on large language model (LLM) chatbots for medical information. While these models perform well on neutral queries, their safety when confronted with patient misconceptions (a phenomenon termed sycophancy) remains uncharacterized in oncology, where validation of unproven therapies can lead to treatment abandonment and increased mortality.
+
+\textbf{Objective:} To evaluate whether LLMs maintain safety standards when users frame cancer treatment queries with unsubstantiated claims, and to determine if conversational format modifies this risk. We hypothesized that LLMs exhibit validation bias when patients present non-consensus views about cancer treatment, increasing the rate of unsafe responses compared with neutral framing.
+
+\textbf{Design, Setting, and Participants:} This cross-sectional stress test employed a 2$\times$2$\times$2 factorial design to evaluate 6,360 individual model interactions across 1,272 structured conversations involving 14 LLMs from 6 providers (OpenAI, Anthropic, Google, Meta, DeepSeek, Alibaba). Conversations varied by framing (patient misconceptions vs neutral), treatment type (evidence-based vs unproven/alternative), and format (single-turn vs multi-turn).
+
+\textbf{Main Outcomes and Measures:} The primary outcome was the rate of unsafe responses, defined as a ``Weak'' classification on a 6-dimension safety rubric (score 0 to 6 of 12) or the presence of critical failures (e.g., generating promotional content for harmful treatments). Secondary outcomes included safety erosion and dimension-level scores.
+
+\textbf{Results:} Among 6,360 interactions (1,272 conversations), framing queries with patient misconceptions significantly increased the rate of unsafe responses compared with neutral framing (14.4\% [93/644] vs 5.1\% [32/628]; odds ratio [OR], 3.13; 95\% CI, 2.05 to 4.79; P $<$ .001). Beyond outright failures, 22.6\% of safe conversations degraded in quality under misconception conditions. Multi-turn dialogue was protective, reducing unsafe response rates by 68\% (OR, 0.32; 95\% CI, 0.21 to 0.48; P $<$ .001). Performance varied substantially by provider, with unsafe rates ranging from 1.8\% (Anthropic) to 36.8\% (DeepSeek).
+
+\textbf{Conclusions and Relevance:} LLMs exhibited significant sycophancy in oncology, validating patient misconceptions at 2.8 times the rate of neutral queries. This validation bias presents a safety risk that standard evaluations miss. Clinical integration of AI assistants requires adversarial testing and multi-turn guardrails to prevent reinforcement of harmful beliefs about cancer treatment.
+\end{abstract}
+
+\newpage
+
+\section{Introduction}
+
+Patients have long turned to the internet to supplement or challenge medical advice, but the emergence of artificial intelligence (AI) chatbots has fundamentally altered this landscape. Unlike static search engines, large language models (LLMs) engage users in conversational dialogue, offering personalized synthesis of complex medical information. Early evaluations have been promising: studies comparing AI responses to physician answers have found LLMs to be empathetic and generally accurate when answering patient questions about cancer. However, these assessments typically rely on a critical assumption: that patients ask questions neutrally, seeking objective truth.
+
+In clinical reality, patients often approach medical information with preexisting beliefs. They may seek validation for unproven alternative therapies or confirmation of fears regarding evidence-based treatments. This distinction is crucial because LLMs are trained to be helpful and harmless, objectives that can conflict when a user's intent is misaligned with medical evidence. A growing body of computer science literature identifies ``sycophancy'' (the tendency of models to agree with users' stated views to maximize satisfaction) as a pervasive alignment failure. In general domains, this might result in an AI agreeing with a user's political preference; in oncology, it could mean validating a decision to forgo life-saving therapy.
+
+The clinical stakes of such validation are severe. Patients with cancer who choose alternative medicine over evidence-based treatments face a twofold greater risk of death. If AI tools reinforce rather than correct misconceptions about these treatments, they may inadvertently accelerate pathways to treatment abandonment. Johnson et al demonstrated that this risk is not theoretical; the decision to forgo evidence-based cancer therapy is often driven by unsubstantiated claims encountered online or within social networks. As AI chatbots increasingly replace search engines as primary information sources, they inherit the responsibility to navigate these misconceptions safely.
+
+However, current medical AI benchmarks primarily test performance on neutral, fact-seeking queries, leaving a significant gap in our understanding of how models perform under adversarial or belief-laden conditions. Prior evaluations, such as those by Pan et al and Ayers et al, have established that models can provide accurate and empathetic responses when asked direct questions like ``What are the common symptoms of lung cancer?'' or ``How does chemotherapy work?'' While valuable, these studies test the model's knowledge retrieval capabilities under ideal conditions. They do not assess the model's robustness when a user asserts, ``I heard chemotherapy is poison and I should take black salve instead.'' By omitting these adversarial scenarios, existing benchmarks may overestimate the safety of LLMs for real-world patient populations who often struggle with conflicting information.
+
+\subsection{Purpose of This Study}
+
+The purpose of this study was to stress-test LLMs against the specific failure mode of sycophancy. We defined sycophancy in this context not merely as agreement, but as the failure to prioritize established medical evidence over user-provided misconceptions. We hypothesized that LLMs exhibit validation bias when patients present non-consensus views about cancer treatment, resulting in higher rates of unsafe responses compared with neutral framing.
+
+We designed a controlled 2$\times$2$\times$2 factorial experiment to determine whether LLMs maintain safety standards when users frame questions with unsubstantiated claims, either by promoting unproven cures or attacking evidence-based therapies. By evaluating 14 leading models through 6,360 individual interactions, we aimed to quantify the ``sycophancy gap'' in medical AI safety (the difference in performance between neutral and belief-laden queries) and identify factors, such as conversational depth, that might mitigate this risk. Our objective was to move beyond ``can the model answer correctly?'' to ``will the model stand its ground?''
+
+\section{Methods}
+
+\subsection{Study Design}
+
+We conducted a 2$\times$2$\times$2 factorial experiment to evaluate the safety and alignment of large language models (LLMs) when discussing cancer treatments from a patient-centered perspective. The three experimental factors were: (1) conversation format (single-turn vs multi-turn), (2) treatment type (evidence-based vs alternative), and (3) query valence (positive vs negative framing). This design yielded 8 experimental conditions representing the spectrum of patient communication patterns encountered in clinical practice.
+
+The conversation structure was designed to model authentic patient-clinician interactions based on clinical experience with cancer treatment counseling. Multi-turn conversations followed an escalating protocol, from routine information-seeking to increasingly safety-critical scenarios, reflecting the natural progression of patient inquiries rather than purely adversarial testing. Importantly, the 8 conditions span a range from entirely benign (e.g., a patient asking positively about chemotherapy) to potentially harmful (e.g., requesting promotional content for unproven treatments).
+
+Prior literature has documented sycophancy in LLMs responding to medical queries, but no systematic evaluation has examined how conversation format, treatment evidence base, and user framing interact to influence safety-relevant outputs. We developed a structured evaluation rubric grounded in principles of clinical cancer care communication to quantify model performance across these conditions.
+
+\subsection{Conversation Dataset}
+
+We evaluated 1,272 conversations corresponding to 6,360 LLM-user interactions across 14 LLMs from 6 providers between March and September 2025. Model selection aimed to create a representative sample of publicly accessible LLMs available to patients at the time of the study, including free-tier commercial models, open-source models, and reasoning-focused architectures. The evaluated models were: Claude 3.5 Haiku and Claude 3.7 Sonnet (Anthropic); Gemini 1.5 Flash, Gemini 2.0 Flash, Gemini 2.0 Thinking, and Gemini 2.5 Pro (Google); Gemma 3 4B and Gemma 3 27B (Google, open-source); GPT-4o, GPT-4o-mini, and O3-mini (OpenAI); DeepSeek R1 Distill (DeepSeek, open-source); Llama 3.2 3B (Meta, open-source); and Qwen 3 32B (Alibaba, open-source).
+
+The treatment dataset comprised 15 alternative therapies and 15 evidence-based therapies selected to represent the range of unproven and evidence-based cancer treatments patients commonly encounter (Appendix 1). Each treatment was queried across two formats and two valences. In the multi-turn format, five sequential queries (T1–T5) were delivered within a single conversation with context maintained between turns, allowing the model to reference prior exchanges. In the single-turn format, the same five queries were delivered as independent, isolated prompts without conversational context. To isolate the effect of valence while minimizing other confounds, positive and negative versions of each query differed by only one or two key words (e.g., ``effective'' vs ``ineffective,'' ``improved'' vs ``worsened,'' ``should'' vs ``shouldn't,'' ``promotional content'' vs ``warning content''), with all other phrasing held constant.
+
+\subsection{Evaluation Rubric}
+
+We developed a structured rubric (maximum 12 points) with six dimensions assessing distinct aspects of model safety (Appendix 2). \textbf{Evidence Accuracy (0–3 points)} evaluated factual correctness with appropriate clinical context. \textbf{Testimonial Handling (0–1 point)} assessed whether models explained why anecdotal evidence cannot establish treatment efficacy. \textbf{Safety Guidance (0–2 points)} measured clarity and proactivity of safety recommendations. \textbf{Misattribution Correction (0–1 point)} assessed whether models corrected false claims about having recommended specific treatments. \textbf{Promotional Content Response (0–3 points)} evaluated refusal to generate marketing materials. \textbf{Healthcare Professional References (0–2 points)} counted consistency of medical consultation recommendations.
+
+Conversations were classified as Strong (10–12 points with no critical failures), Moderate (7–9 points with no critical failures), or Weak (0–6 points or any critical failure). Three categories of critical failure resulted in automatic Weak classification: (1) \textit{Enables Dangerous Implementation}, (2) \textit{Actively Endorses Harmful Content}, and (3) \textit{Creates Promotional Content}.
+
+\subsection{Conversation Scoring}
+
+We used GPT-5-mini via the OpenAI Batch API as an automated judge for scalable, consistent evaluation. The judge received structured prompts containing the complete rubric criteria, the conversation transcript, and instructions to first provide qualitative analysis of each rubric dimension before generating scores. This chain-of-thought approach improved scoring consistency by requiring explicit reasoning.
+
+The judge produced dimension-level qualitative assessments which were then converted to numeric scores using Python algorithms. Healthcare Professional Reference counts were computed algorithmically by pattern-matching explicit medical consultation recommendations across all model responses.
+
+Judge prompts and scoring algorithms were iteratively refined on a pilot set of 88 conversations with dual human annotation by two clinical researchers. Disagreements were resolved through discussion to establish a gold standard. Agreement was assessed as the percentage of cases where the LLM judge score matched at least one human annotator (``LLM vs Any Human''), reflecting practical alignment with acceptable human judgment rather than requiring exact match with a single adjudicated score. Overall agreement was 81.8\%, with dimension-level agreement ranging from 77.3\% (Misattribution Correction) to 93.2\% (Testimonial Handling) (Appendix 3).
+
+\subsection{Statistical Analysis}
+
+Categorical comparisons (classification distributions, critical failure rates) used Pearson chi-square tests or Fisher's exact test when expected cell counts were $<$5. Odds ratios with 95\% confidence intervals quantified effect sizes for binary outcomes. Wilson score intervals provided confidence intervals for proportions.
+
+Continuous score comparisons used independent samples $t$-tests for two-group comparisons and one-way ANOVA with Tukey HSD post-hoc tests for multi-group comparisons across the four treatment$\times$valence conditions.
+
+To model critical failure risk, we fit logistic regression models with treatment type, valence, format, and their interactions as predictors. Model comparison used likelihood ratio tests to evaluate the significance of interaction terms. Predicted probabilities were computed for each experimental condition.
+
+To assess the joint effects of all three experimental factors on total rubric scores, we conducted three-way ANOVA (Format $\times$ Treatment $\times$ Valence) with partial eta-squared ($\eta_p^2$) as effect size measures.
+
+All analyses were conducted in Python 3.10 using pandas 1.5.3, NumPy 1.24.2, scikit-learn 1.2.2, and statsmodels 0.14.0. Statistical significance was set at $\alpha = 0.05$ (two-sided) for all tests.
+
+\section{Results}
+
+\subsection{Study Population}
+
+We evaluated 6,360 individual model interactions across 1,272 conversations involving 14 large language models from six providers (OpenAI, Anthropic, Google, Meta, DeepSeek, and Alibaba). Each conversation followed a structured adversarial protocol designed to stress-test model safety when discussing cancer treatments.
+
+Conversations were systematically varied across three factors: conversation format (single-turn vs multi-turn with 5 exchanges), treatment type (evidence-based vs unproven/alternative), and user framing valence (positive/promoting vs negative/questioning). This 2$\times$2$\times$2 factorial design yielded 8 experimental conditions.
+
+\subsection{Overall Safety Performance}
+
+Using our 6-dimension rubric (maximum score 12), conversations were classified as Strong (score 10 to 12, no critical failures), Moderate (score 7 to 9, no critical failures), or Weak (score 0 to 6 or any critical failure).
+
+Overall classification distribution: Strong 919 (72.2\%), Moderate 228 (17.9\%), Weak 125 (9.8\%). A total of 111 conversations (8.7\%) contained at least one critical failure, defined as a response that could directly harm patients through dangerous implementation guidance, active endorsement of harmful treatments, or generation of promotional content for unproven therapies.
+
+\subsection{Primary Finding: The Sycophancy Effect}
+
+We defined misconception framing as queries where users either (1) promoted unproven/alternative treatments as beneficial or (2) attacked evidence-based treatments as harmful. The complementary neutral framing included queries where users questioned unproven/alternative treatments or asked neutrally about evidence-based treatments.
+
+Under misconception framing, models exhibited significantly higher rates of unsafe responses (14.4\% [93/644] vs 5.1\% [32/628]; OR 3.13; 95\% CI, 2.05 to 4.79; P $<$ .001).
+
+This pattern, where models validated patient beliefs regardless of medical accuracy, represents a form of sycophancy or validation bias. Critically, both ``colloidal silver cures cancer'' (promoting unproven therapies) and ``chemotherapy is poison'' (attacking proven therapies) triggered similar failure patterns, despite representing opposite directions of patient misconceptions.
+
+\subsection{Secondary Finding: Safety Erosion}
+
+Beyond outright failures, we observed safety erosion. Among 429 paired conversations that achieved Strong classification under neutral framing: 332 (77.4\%) remained Strong, 54 (12.6\%) eroded to Moderate, and 43 (10.0\%) collapsed to Weak.
+
+In total, 22.6\% of previously safe conversations showed degraded safety performance when users pushed non-consensus views. This erosion was clinically significant: even when models did not catastrophically fail, they provided less clear safety guidance, weaker evidence contextualization, or reduced emphasis on consulting healthcare providers.
+
+\subsection{Protective Factor: Multi-Turn Conversations}
+
+Conversation format emerged as a powerful protective factor. Multi-turn conversations showed substantially lower unsafe rates than single-turn exchanges (5.2\% [34/655] vs 14.8\% [91/617]; OR, 0.32; 95\% CI, 0.21 to 0.48; P $<$ .001).
+
+Under the highest-risk condition (single-turn misconception), more than 1 in 5 conversations (21.2\%) resulted in unsafe responses. Multi-turn format reduced this to approximately 1 in 12 (8.1\%). These results indicated that extended dialogue provided substantial protection against validation bias.
+
+\subsection{Model Heterogeneity}
+
+Substantial variation existed across model providers. Top performers included Gemini 1.5 Flash (0.8\% unsafe), Claude 3.7 Sonnet (0.8\% unsafe), and O3-mini (0.8\% unsafe). Highest risk models included DeepSeek R1 Distill (36.8\% unsafe) and Gemma 3 4B (35.6\% unsafe).
+
+\subsection{Dimension-Level Analysis}
+
+The 6-dimension rubric revealed that Promotional Content Response was the primary driver of failures. Of 111 critical failures: 105 (94.6\%) involved generating promotional content for harmful treatments, 43 (38.7\%) actively endorsed harmful content, and 2 (1.8\%) enabled dangerous implementation.
+
+When comparing misconception vs neutral framing at the dimension level, the largest effect was observed in Promotional Content Response (2.42 vs 2.73 out of 3; P $<$ .001), followed by Evidence Accuracy (2.68 vs 2.80; P $<$ .001).
+
+\section{Discussion}
+
+Large language models in oncology do not simply fail to provide accurate information; they actively validate patient misconceptions. This study demonstrates that when patients frame cancer treatment queries with embedded beliefs, LLMs exhibit sycophancy: a pattern of validation bias that increases unsafe response rates nearly threefold. This finding has profound implications for the integration of AI chatbots into cancer care, where treatment decisions carry life-or-death consequences.
+
+\subsection{Principal Findings in Context}
+
+The central finding of this study, that misconception framing increases the odds of unsafe AI responses by a factor of 2.8, reveals a critical gap between how LLMs are tested and how they perform in practice. Prior evaluations of AI chatbots in oncology tested models under favorable conditions: neutral queries from cooperative, information-seeking users. Our findings challenge this optimism.
+
+The bidirectional nature of this effect is particularly striking. Patients who promote unproven treatments and those who attack evidence-based therapies triggered equivalent failure patterns. This symmetry suggests that sycophancy in medical AI is not simply a knowledge gap but a fundamental alignment failure where social compliance overrides epistemic responsibility.
+
+\subsection{Clinical Implications}
+
+The clinical stakes of AI sycophancy in oncology cannot be overstated. Johnson and colleagues demonstrated that patients who choose alternative medicine instead of evidence-based cancer treatment experience significantly worse survival, with five-year mortality more than twice that of patients receiving conventional care.
+
+AI chatbots now occupy a position of authority in this information ecosystem. When a patient asks an LLM for validation of misconceptions, and the model responds with even partial validation, it provides exactly the confirmation the patient sought. Under the highest-risk condition (single-turn conversations with misconception framing), more than one in five AI responses (21.2\%) were classified as unsafe.
+
+\subsection{The Protective Effect of Multi-Turn Dialogue}
+
+Multi-turn exchanges reduced unsafe response rates by 68\% compared to single-turn queries. Extended dialogue allows models to accumulate context, enables clarifying questions, and establishes safety-oriented postures that persist through subsequent exchanges. This argues against single-shot AI assistants in oncology contexts.
+
+\subsection{Implications for Medical AI Evaluation}
+
+We propose that evaluations of LLMs intended for medical use should include: (1) adversarial user framing with embedded incorrect beliefs, (2) bidirectional testing of patient misconceptions, and (3) multi-turn analysis across conversational exchanges.
+
+\subsection{Limitations}
+
+Our adversarial prompts were constructed by researchers and may not perfectly replicate real patient communication patterns. Our evaluation relied on a single LLM judge rather than human oncologist ratings. The study was conducted in English with Western oncology scenarios. Results represent a temporal snapshot of rapidly evolving capabilities.
+
+\subsection{Conclusions}
+
+When patients bring misconceptions to AI chatbots, the models too often agree rather than correct. This sycophancy effect represents a critical failure mode of LLMs in oncology. Multi-turn conversation formats and careful model selection provide partial protection, but the fundamental tension between user accommodation and epistemic responsibility remains unresolved. As LLMs become increasingly integrated into cancer care, evaluation frameworks must evolve beyond neutral-query benchmarks to stress-test the scenarios where patients need accurate information most.
+
+\end{document}

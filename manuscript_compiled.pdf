@@ -1,0 +1,5 @@
+pdflatex -interaction nonstopmode -recorder -output-directory latex.out /tmp/downloads/tmp_1502/main.tex
+<no file>: error: Emergency stop: job aborted, file error in nonstop mode
+      at <*> /tmp/downloads/tmp_1502/main.tex
+<no file>: Fatal error (no output file produced)
+There were errors; /tmp/storage/compilation_1380/output.pdf not updated

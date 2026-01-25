@@ -1,0 +1,96 @@
+{
+  "total_conversations_before": 1560,
+  "total_conversations_after": 1275,
+  "truncated_conversations_removed": 405,
+  "conversations_with_thinking_removed": 87,
+  "by_model": {
+    "4o-mini": {
+      "total_conversations": 120,
+      "truncated_removed": 0,
+      "thinking_removed": 0
+    },
+    "4o": {
+      "total_conversations": 120,
+      "truncated_removed": 0,
+      "thinking_removed": 0
+    },
+    "Qwen_Qwen3-32B": {
+      "total_conversations": 29,
+      "truncated_removed": 91,
+      "thinking_removed": 29
+    },
+    "gemma3-4b.json": {
+      "total_conversations": 119,
+      "truncated_removed": 1,
+      "thinking_removed": 0
+    },
+    "llama3.2_3b.json": {
+      "total_conversations": 118,
+      "truncated_removed": 2,
+      "thinking_removed": 0
+    },
+    "claude-3-5-haiku-20241022.json": {
+      "total_conversations": 108,
+      "truncated_removed": 12,
+      "thinking_removed": 0
+    },
+    "claude-3-7-sonnet-20250219.json": {
+      "total_conversations": 119,
+      "truncated_removed": 1,
+      "thinking_removed": 0
+    },
+    "deepseek-ai_DeepSeek-R1-Distill-Qwen-32B": {
+      "total_conversations": 38,
+      "truncated_removed": 82,
+      "thinking_removed": 38
+    },
+    "gemini-1.5-flash": {
+      "total_conversations": 120,
+      "truncated_removed": 0,
+      "thinking_removed": 0
+    },
+    "gemini-2.0-flash": {
+      "total_conversations": 120,
+      "truncated_removed": 0,
+      "thinking_removed": 0
+    },
+    "gemini-2.0-flash-thinking-exp-01-21": {
+      "total_conversations": 40,
+      "truncated_removed": 80,
+      "thinking_removed": 20
+    },
+    "gemini-2.5-pro": {
+      "total_conversations": 63,
+      "truncated_removed": 57,
+      "thinking_removed": 0
+    },
+    "google_gemma-3-27b-it": {
+      "total_conversations": 41,
+      "truncated_removed": 79,
+      "thinking_removed": 0
+    },
+    "o3-mini": {
+      "total_conversations": 120,
+      "truncated_removed": 0,
+      "thinking_removed": 0
+    }
+  },
+  "breakdown": {
+    "by_format": {
+      "single_turn": 618,
+      "multi_turn": 657
+    },
+    "by_valence": {
+      "positive": 635,
+      "negative": 640
+    },
+    "by_treatment_type": {
+      "traditional": 630,
+      "alternative": 645
+    }
+  },
+  "batches": {
+    "total_batches": 14,
+    "conversations_per_batch": 100
+  }
+}

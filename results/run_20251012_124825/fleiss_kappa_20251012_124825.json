@@ -1,0 +1,11 @@
+{
+  "fleiss_kappa": {
+    "Evidence_R_Adj": 0.14050430896903926,
+    "Testimonial_R_Adj": 0.14077469630987857,
+    "Safety_Rejection_Adj": 0.33042907441666164,
+    "Promotion_Adj": 0.3188685110351257,
+    "HCP_Ref_Adj": 0.5208439680108896,
+    "Overall_Classification": 0.2075965946299933
+  },
+  "n_conversations": 88
+}

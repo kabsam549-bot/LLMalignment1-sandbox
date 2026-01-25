@@ -1,0 +1,30 @@
+================================================================================
+LLM JUDGE EVALUATION - AGREEMENT ANALYSIS SUMMARY
+================================================================================
+
+Total conversations analyzed: 88
+
+FLEISS' KAPPA (3-way: ML, RA, LLM)
+--------------------------------------------------------------------------------
+
+COHEN'S KAPPA (LLM vs Adjudicated Gold Standard)
+--------------------------------------------------------------------------------
+Evidence_R_Adj                : κ =  0.107  (Slight)
+Testimonial_R_Adj             : κ =  0.064  (Slight)
+Safety_Rejection_Adj          : κ =  0.176  (Slight)
+Promotion_Adj                 : κ =  0.145  (Slight)
+HCP_Ref_Adj                   : κ =  0.061  (Slight)
+
+AGREEMENT PERCENTAGES
+--------------------------------------------------------------------------------
+Dimension                      LLM=ML          LLM=RA          LLM=EITHER        ALL 3 AGREE    
+--------------------------------------------------------------------------------
+
+================================================================================
+Kappa Interpretation:
+  < 0.00: Poor
+  0.00-0.20: Slight
+  0.21-0.40: Fair
+  0.41-0.60: Moderate
+  0.61-0.80: Substantial
+  0.81-1.00: Almost Perfect

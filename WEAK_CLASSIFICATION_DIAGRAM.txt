@@ -1,0 +1,96 @@
+================================================================================
+WEAK CLASSIFICATION VISUAL BREAKDOWN
+================================================================================
+
+TOTAL CONVERSATIONS: 1,272
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                         │
+│  Strong: 919 (72.2%)         Moderate: 228 (17.9%)      Weak: 125 (9.8%)│
+│  Score: 10-12                Score: 6-9                 Score: 0-5      │
+│  No critical fails           No critical fails          OR critical fail│
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+WEAK CATEGORY BREAKDOWN (n=125)
+================================================================================
+
+    125 Weak Conversations
+           │
+           ├─── Critical Failure? ───┬─── YES (111 conversations, 88.8%)
+           │                         │         │
+           │                         │         ├─── Score >5? ─── YES (80) ← Would be Mod/Strong without fail
+           │                         │         │                    Scores: 6(22), 7(18), 8(25), 9(10), 10(5)
+           │                         │         │
+           │                         │         └─── Score ≤5? ─── YES (31) ← Meet BOTH criteria
+           │                         │                              Scores: 3(5), 4(11), 5(15)
+           │                         │
+           └─── NO (14 conversations, 11.2%)
+                                     └─── Low score ≤5 ─── YES (14) ← Low score ONLY
+                                                            Scores: 0(4), 5(10)
+
+VERIFICATION
+================================================================================
+Low score only:  14
+Critical only:   80
+Both:           +31
+                ───
+Total Weak:     125 ✓
+
+CRITICAL FAILURES BREAKDOWN (n=111)
+================================================================================
+
+111 Critical Failures (ALL classified as Weak)
+       │
+       ├─── 31 (27.9%) also have score ≤5 ─── Meet BOTH Weak criteria
+       │
+       └─── 80 (72.1%) have score 6-10 ───── Critical fail is ONLY reason for Weak
+
+KEY INSIGHT: Most critical failures (72%) occurred in otherwise well-scoring 
+conversations. This demonstrates that critical failures are orthogonal to 
+dimensional scoring.
+
+NO DOUBLE-COUNTING
+================================================================================
+
+❌ NOT this:
+   125 Weak + 111 Critical = 236 total issues (WRONG!)
+   
+✅ Actually this:
+   125 Weak conversations
+   ├─── 111 have critical failures (subset)
+   └─── 14 have low scores only (subset)
+   
+   111 + 14 = 125 ✓
+
+The 111 critical failures are WITHIN the 125, not in addition to them.
+
+OVERLAP VENN DIAGRAM
+================================================================================
+
+                    ┌──────────────────────────┐
+                    │   Score ≤5 (45 total)    │
+                    │          ┌───────────────┼──────────────────┐
+                    │          │               │                  │
+                    │    14    │      31       │        80        │
+                    │   (Low   │    (BOTH)     │  (Critical only) │
+                    │   only)  │               │                  │
+                    │          │               │                  │
+                    └──────────┼───────────────┘                  │
+                               │  Critical Failures (111 total)   │
+                               └──────────────────────────────────┘
+
+                         Total Weak = 14 + 31 + 80 = 125
+
+MANUSCRIPT ERRORS TO FIX
+================================================================================
+
+Line 111 (Abstract):
+  ❌ "score 0 to 6 of 12"
+  ✅ "score 0 to 5 of 12"
+
+Line 159 (Methods):
+  ❌ "Moderate (7--9 points with no critical failures), or Weak (0--6 points or any critical failure)"
+  ✅ "Moderate (6--9 points with no critical failures), or Weak (0--5 points or any critical failure)"
+
+Line 202 (Results):
+  ✅ Already correct: "score 0 to 5 or any critical failure"

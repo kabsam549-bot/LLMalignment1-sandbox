@@ -1,0 +1,429 @@
+{
+  "overall": {
+    "total": 97,
+    "counts": {
+      "Weak": 9,
+      "Moderate": 16,
+      "Strong": 72
+    },
+    "percentages": {
+      "Weak": 9.278350515463918,
+      "Moderate": 16.49484536082474,
+      "Strong": 74.22680412371135
+    }
+  },
+  "by_format": {
+    "multi_turn": {
+      "total": 56,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 7,
+        "Strong": 48
+      },
+      "percentages": {
+        "Weak": 1.7857142857142856,
+        "Moderate": 12.5,
+        "Strong": 85.71428571428571
+      }
+    },
+    "single_turn": {
+      "total": 41,
+      "counts": {
+        "Weak": 8,
+        "Moderate": 9,
+        "Strong": 24
+      },
+      "percentages": {
+        "Weak": 19.51219512195122,
+        "Moderate": 21.951219512195124,
+        "Strong": 58.536585365853654
+      }
+    }
+  },
+  "by_valence": {
+    "negative": {
+      "total": 52,
+      "counts": {
+        "Weak": 2,
+        "Moderate": 7,
+        "Strong": 43
+      },
+      "percentages": {
+        "Weak": 3.8461538461538463,
+        "Moderate": 13.461538461538462,
+        "Strong": 82.6923076923077
+      }
+    },
+    "positive": {
+      "total": 45,
+      "counts": {
+        "Weak": 7,
+        "Moderate": 9,
+        "Strong": 29
+      },
+      "percentages": {
+        "Weak": 15.555555555555555,
+        "Moderate": 20.0,
+        "Strong": 64.44444444444444
+      }
+    }
+  },
+  "by_treatment": {
+    "alternative": {
+      "total": 50,
+      "counts": {
+        "Weak": 5,
+        "Moderate": 5,
+        "Strong": 40
+      },
+      "percentages": {
+        "Weak": 10.0,
+        "Moderate": 10.0,
+        "Strong": 80.0
+      }
+    },
+    "traditional": {
+      "total": 47,
+      "counts": {
+        "Weak": 4,
+        "Moderate": 11,
+        "Strong": 32
+      },
+      "percentages": {
+        "Weak": 8.51063829787234,
+        "Moderate": 23.404255319148938,
+        "Strong": 68.08510638297872
+      }
+    }
+  },
+  "by_model": {
+    "4o": {
+      "total": 5,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 1,
+        "Strong": 4
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 20.0,
+        "Strong": 80.0
+      }
+    },
+    "4o-mini": {
+      "total": 9,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 1,
+        "Strong": 8
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 11.11111111111111,
+        "Strong": 88.88888888888889
+      }
+    },
+    "Qwen_Qwen3-32B": {
+      "total": 1,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 0,
+        "Strong": 1
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 0.0,
+        "Strong": 100.0
+      }
+    },
+    "claude-3-5-haiku-20241022.json": {
+      "total": 7,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 2,
+        "Strong": 5
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 28.57142857142857,
+        "Strong": 71.42857142857143
+      }
+    },
+    "claude-3-7-sonnet-20250219.json": {
+      "total": 8,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 1,
+        "Strong": 6
+      },
+      "percentages": {
+        "Weak": 12.5,
+        "Moderate": 12.5,
+        "Strong": 75.0
+      }
+    },
+    "deepseek-ai_DeepSeek-R1-Distill-Qwen-32B": {
+      "total": 2,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 1,
+        "Strong": 0
+      },
+      "percentages": {
+        "Weak": 50.0,
+        "Moderate": 50.0,
+        "Strong": 0.0
+      }
+    },
+    "gemini-1.5-flash": {
+      "total": 13,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 0,
+        "Strong": 12
+      },
+      "percentages": {
+        "Weak": 7.6923076923076925,
+        "Moderate": 0.0,
+        "Strong": 92.3076923076923
+      }
+    },
+    "gemini-2.0-flash": {
+      "total": 13,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 1,
+        "Strong": 12
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 7.6923076923076925,
+        "Strong": 92.3076923076923
+      }
+    },
+    "gemini-2.0-flash-thinking-exp-01-21": {
+      "total": 2,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 0,
+        "Strong": 1
+      },
+      "percentages": {
+        "Weak": 50.0,
+        "Moderate": 0.0,
+        "Strong": 50.0
+      }
+    },
+    "gemini-2.5-pro": {
+      "total": 3,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 0,
+        "Strong": 3
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 0.0,
+        "Strong": 100.0
+      }
+    },
+    "gemma3-4b.json": {
+      "total": 12,
+      "counts": {
+        "Weak": 3,
+        "Moderate": 3,
+        "Strong": 6
+      },
+      "percentages": {
+        "Weak": 25.0,
+        "Moderate": 25.0,
+        "Strong": 50.0
+      }
+    },
+    "google_gemma-3-27b-it": {
+      "total": 3,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 1,
+        "Strong": 2
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 33.33333333333333,
+        "Strong": 66.66666666666666
+      }
+    },
+    "llama3.2_3b.json": {
+      "total": 10,
+      "counts": {
+        "Weak": 2,
+        "Moderate": 5,
+        "Strong": 3
+      },
+      "percentages": {
+        "Weak": 20.0,
+        "Moderate": 50.0,
+        "Strong": 30.0
+      }
+    },
+    "o3-mini": {
+      "total": 9,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 0,
+        "Strong": 9
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 0.0,
+        "Strong": 100.0
+      }
+    }
+  },
+  "by_format_valence": {
+    "multi_turn + negative": {
+      "total": 34,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 5,
+        "Strong": 28
+      },
+      "percentages": {
+        "Weak": 2.941176470588235,
+        "Moderate": 14.705882352941178,
+        "Strong": 82.35294117647058
+      }
+    },
+    "multi_turn + positive": {
+      "total": 22,
+      "counts": {
+        "Weak": 0,
+        "Moderate": 2,
+        "Strong": 20
+      },
+      "percentages": {
+        "Weak": 0.0,
+        "Moderate": 9.090909090909092,
+        "Strong": 90.9090909090909
+      }
+    },
+    "single_turn + negative": {
+      "total": 18,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 2,
+        "Strong": 15
+      },
+      "percentages": {
+        "Weak": 5.555555555555555,
+        "Moderate": 11.11111111111111,
+        "Strong": 83.33333333333334
+      }
+    },
+    "single_turn + positive": {
+      "total": 23,
+      "counts": {
+        "Weak": 7,
+        "Moderate": 7,
+        "Strong": 9
+      },
+      "percentages": {
+        "Weak": 30.434782608695656,
+        "Moderate": 30.434782608695656,
+        "Strong": 39.130434782608695
+      }
+    }
+  },
+  "by_treatment_valence": {
+    "alternative + negative": {
+      "total": 29,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 1,
+        "Strong": 27
+      },
+      "percentages": {
+        "Weak": 3.4482758620689653,
+        "Moderate": 3.4482758620689653,
+        "Strong": 93.10344827586206
+      }
+    },
+    "alternative + positive": {
+      "total": 21,
+      "counts": {
+        "Weak": 4,
+        "Moderate": 4,
+        "Strong": 13
+      },
+      "percentages": {
+        "Weak": 19.047619047619047,
+        "Moderate": 19.047619047619047,
+        "Strong": 61.904761904761905
+      }
+    },
+    "traditional + negative": {
+      "total": 23,
+      "counts": {
+        "Weak": 1,
+        "Moderate": 6,
+        "Strong": 16
+      },
+      "percentages": {
+        "Weak": 4.3478260869565215,
+        "Moderate": 26.08695652173913,
+        "Strong": 69.56521739130434
+      }
+    },
+    "traditional + positive": {
+      "total": 24,
+      "counts": {
+        "Weak": 3,
+        "Moderate": 5,
+        "Strong": 16
+      },
+      "percentages": {
+        "Weak": 12.5,
+        "Moderate": 20.833333333333336,
+        "Strong": 66.66666666666666
+      }
+    }
+  },
+  "dimension_scores": {
+    "Evidence_R_Adj": {
+      "mean": 2.7731958762886597,
+      "min": 0,
+      "max": 3,
+      "count": 97
+    },
+    "Testimonial_R_Adj": {
+      "mean": 0.711340206185567,
+      "min": 0,
+      "max": 1,
+      "count": 97
+    },
+    "Safety_Rejection_Adj": {
+      "mean": 1.8041237113402062,
+      "min": 1,
+      "max": 2,
+      "count": 97
+    },
+    "Misatribution_R_Adj": {
+      "mean": 0.7628865979381443,
+      "min": 0,
+      "max": 1,
+      "count": 97
+    },
+    "Promotion_Adj": {
+      "mean": 2.6082474226804124,
+      "min": 0,
+      "max": 3,
+      "count": 97
+    },
+    "HCP_Ref_Adj": {
+      "mean": 1.6494845360824741,
+      "min": 1,
+      "max": 2,
+      "count": 97
+    }
+  }
+}

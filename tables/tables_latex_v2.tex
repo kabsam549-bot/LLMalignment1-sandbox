@@ -1,0 +1,228 @@
+% ============================================================================
+% PUBLICATION-READY LATEX TABLES
+% Stress Testing Large Language Models for Medical Safety
+% JAMA Oncology Submission
+% Generated: 2026-01-24
+% ============================================================================
+
+% NOTE: These tables follow JAMA formatting guidelines:
+% - No vertical lines
+% - Minimal horizontal lines (top, after header, bottom)
+% - Left-aligned text, center-aligned numbers
+% - Footnotes using symbols (*, †, ‡, §)
+% - Abbreviations spelled out in footnotes
+
+% Required packages:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage{array}
+% \usepackage{threeparttable}
+
+% ============================================================================
+% TABLE 1: STUDY DESIGN
+% ============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{2×2×2 Factorial Study Design for Evaluating LLM Safety in Cancer Treatment Discussions}
+\label{tab:study-design}
+\begin{threeparttable}
+\begin{tabular}{@{}lllp{7cm}@{}}
+\toprule
+\textbf{Factor} & \textbf{Level 1} & \textbf{Level 2} & \textbf{Rationale} \\
+\midrule
+Conversation Format & Single-turn & Multi-turn (5 exchanges) & Tests whether extended dialogue allows models to maintain or recover safety posture \\
+\addlinespace
+Treatment Type & Evidence-based* & Unproven/Alternative† & Evaluates differential model behavior toward established versus non-consensus treatments \\
+\addlinespace
+User Framing (Valence) & Positive (promoting) & Negative (questioning) & Assesses susceptibility to validation bias when users express strong preferences \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\small
+\item Abbreviations: LLM, large language model.
+\item * Examples: chemotherapy, surgical resection, immunotherapy, CAR T-cell therapy.
+\item † Examples: black salve, colloidal silver, vitamin B17, miracle mineral solution.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% ============================================================================
+% TABLE 2: PRIMARY OUTCOMES - THE SYCOPHANCY EFFECT
+% ============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Primary Safety Outcomes: The Sycophancy Effect by Framing Condition}
+\label{tab:primary-outcomes}
+\begin{threeparttable}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & \multicolumn{2}{c}{\textbf{Framing Condition}} & & & \\
+\cmidrule(lr){2-3}
+\textbf{Outcome} & \textbf{Neutral} & \textbf{Misconception} & \textbf{Difference} & \textbf{OR (95\% CI)} & \textbf{P Value} \\
+ & (n = 636) & (n = 636) & & & \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Safety Classification}} \\
+\addlinespace
+\quad Strong, No.\ (\%) & 477 (75.0) & 442 (69.5) & −5.5 pp & --- & .021 \\
+\quad Moderate, No.\ (\%) & 127 (20.0) & 101 (15.9) & −4.1 pp & --- & .048 \\
+\quad Weak (Unsafe), No.\ (\%) & 32 (5.0) & 93 (14.6) & +9.6 pp & 3.13 (2.05--4.79) & <.001 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Total Safety Score (0--12)}} \\
+\addlinespace
+\quad Mean (SD) & 10.22 (2.1) & 9.94 (2.8) & −0.28 & --- & .045 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Critical Failures*}} \\
+\addlinespace
+\quad Any critical failure, No.\ (\%) & 25 (3.9) & 86 (13.5) & +9.6 pp & 3.84 (2.40--6.14) & <.001 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\small
+\item Abbreviations: CI, confidence interval; OR, odds ratio; pp, percentage points; SD, standard deviation.
+\item * Critical failures include: enables dangerous implementation, actively endorses harmful content, or creates promotional content for unproven therapies.
+\item Misconception framing defined as: (1) promoting unproven/alternative treatments OR (2) questioning evidence-based treatments.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% ============================================================================
+% TABLE 3: MULTI-TURN PROTECTIVE EFFECT
+% ============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Unsafe Response Rates by Conversation Format and Framing Condition}
+\label{tab:format-interaction}
+\begin{threeparttable}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{\textbf{Framing Condition}} & & \\
+\cmidrule(lr){2-3}
+\textbf{Conversation Format} & \textbf{Neutral} & \textbf{Misconception} & \textbf{RRR*} & \textbf{P Value†} \\
+\midrule
+Single-turn, \% (n) & 8.2 (26/316) & 21.2 (68/321) & Reference & --- \\
+Multi-turn, \% (n) & 2.2 (7/320) & 8.1 (26/315) & 62\% & <.001 \\
+\addlinespace
+Absolute risk reduction & 6.0 pp & 13.1 pp & --- & --- \\
+Relative risk reduction & 73\% & 62\% & --- & --- \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Main Effect of Format}} \\
+\addlinespace
+\quad OR (95\% CI) & \multicolumn{4}{c}{0.32 (0.21--0.48); P < .001} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\small
+\item Abbreviations: CI, confidence interval; OR, odds ratio; pp, percentage points; RRR, relative risk reduction.
+\item * Relative risk reduction comparing multi-turn to single-turn within each framing condition.
+\item † P values from logistic regression with format, framing, and their interaction as predictors.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% ============================================================================
+% TABLE 4: MODEL PERFORMANCE BY PROVIDER
+% ============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Safety Performance by Model Provider}
+\label{tab:model-performance}
+\begin{threeparttable}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Provider} & \textbf{Models} & \textbf{n} & \textbf{Unsafe Rate, \%} & \textbf{95\% CI} & \textbf{Strong Rate, \%} \\
+\midrule
+Anthropic & 2 & 227 & 1.8 & 0.6--4.0 & 85.5 \\
+OpenAI & 4 & 359 & 8.6 & 6.0--12.0 & 78.0 \\
+Google* & 6 & 501 & 10.2 & 7.7--13.2 & 71.7 \\
+Meta & 1 & 118 & 16.9 & 10.8--24.7 & 55.1 \\
+Alibaba & 1 & 29 & 17.2 & 6.5--35.0 & 72.4 \\
+DeepSeek & 1 & 38 & 36.8 & 22.4--53.7 & 39.5 \\
+\midrule
+\textbf{Overall} & \textbf{14} & \textbf{1272} & \textbf{9.8} & \textbf{8.2--11.6} & \textbf{72.2} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\small
+\item Abbreviations: CI, confidence interval.
+\item Models evaluated: Claude 3.5 Haiku, Claude 3.7 Sonnet (Anthropic); GPT-4o, GPT-4o Mini, O3 Mini (OpenAI); Gemini 1.5 Flash, Gemini 2.0 Flash, Gemini 2.0 Thinking, Gemini 2.5 Pro, Gemma 3 4B, Gemma 3 27B (Google); Llama 3.2 3B (Meta); Qwen 3 32B (Alibaba); DeepSeek R1 Distill (DeepSeek).
+\item * Includes both Gemini (commercial) and Gemma (open-source) model families.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% ============================================================================
+% TABLE 5: RUBRIC DIMENSION ANALYSIS
+% ============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Rubric Dimension Scores by Framing Condition}
+\label{tab:rubric-dimensions}
+\begin{threeparttable}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & & \multicolumn{2}{c}{\textbf{Mean Score (SD)}} & & & \\
+\cmidrule(lr){3-4}
+\textbf{Dimension} & \textbf{Max} & \textbf{Neutral} & \textbf{Misconception} & \textbf{Δ} & \textbf{ES*} & \textbf{P Value} \\
+\midrule
+Evidence Accuracy & 3 & 2.80 (0.5) & 2.68 (0.6) & −0.12 & 0.22 & <.001 \\
+Testimonial Handling & 1 & 0.61 (0.5) & 0.83 (0.4) & +0.22 & 0.49 & <.001 \\
+Safety Guidance & 2 & 1.73 (0.5) & 1.70 (0.5) & −0.03 & 0.06 & .45 \\
+Misattribution Correction & 1 & 0.68 (0.5) & 0.77 (0.4) & +0.09 & 0.20 & .002 \\
+Promotional Content Response & 3 & 2.73 (0.7) & 2.42 (1.0) & −0.31 & 0.36 & <.001 \\
+HCP Referral & 2 & 1.67 (0.5) & 1.54 (0.6) & −0.13 & 0.24 & <.001 \\
+\midrule
+\textbf{Total Score} & \textbf{12} & \textbf{10.22 (2.1)} & \textbf{9.94 (2.8)} & \textbf{−0.28} & \textbf{0.11} & \textbf{.045} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\small
+\item Abbreviations: ES, effect size (Cohen's d); HCP, healthcare professional; SD, standard deviation.
+\item * Positive ES values indicate worse performance under misconception framing.
+\item Promotional Content Response was the primary driver of safety failures; 94.6\% of critical failures involved generating promotional content for harmful treatments.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% ============================================================================
+% TABLE 6: SAFETY EROSION IN PAIRED CONVERSATIONS
+% ============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Classification Transitions in Paired Conversations (Neutral → Misconception Framing)}
+\label{tab:erosion}
+\begin{threeparttable}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{3}{c}{\textbf{Outcome Under Misconception Framing}} & \\
+\cmidrule(lr){2-4}
+\textbf{Starting Classification} & \textbf{Strong} & \textbf{Moderate} & \textbf{Weak} & \textbf{Total} \\
+\midrule
+Strong (Neutral) & 332 (77.4\%) & 54 (12.6\%) & 43 (10.0\%) & 429 \\
+Moderate (Neutral) & 48 (43.6\%) & 35 (31.8\%) & 27 (24.5\%) & 110 \\
+Weak (Neutral) & 13 (43.3\%) & 9 (30.0\%) & 8 (26.7\%) & 30 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Summary Statistics}} \\
+\addlinespace
+\quad Degradation rate* & \multicolumn{4}{c}{22.6\% of Strong conversations degraded} \\
+\quad Improvement rate† & \multicolumn{4}{c}{43.3\% of Weak conversations improved} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\small
+\item Values represent number of paired conversations (row percentage).
+\item Analysis restricted to 569 conversation pairs with complete data for both framing conditions.
+\item * Proportion of conversations that started Strong under neutral framing and degraded to Moderate or Weak under misconception framing.
+\item † Proportion of conversations that started Weak under neutral framing and improved to Moderate or Strong under misconception framing, suggesting bidirectional effects.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% ============================================================================
+% END OF TABLES
+% ============================================================================

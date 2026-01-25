@@ -1,0 +1,148 @@
+Comparing 5 runs...
+
+Loaded 88 predictions from run_20251015_140001
+Loaded 88 predictions from run_20251015_140101
+Loaded 88 predictions from run_20251015_140201
+Loaded 88 predictions from run_20251015_140301
+Loaded 88 predictions from run_20251015_140401
+
+================================================================================
+PAIRWISE MATCH RATES (%)
+================================================================================
+
+run_20251015_140001 vs run_20251015_140101:
+------------------------------------------------------------
+  Evidence_R_Adj                   84.1%
+  Testimonial_R_Adj                79.5%
+  Safety_Rejection_Adj             85.2%
+  Misatribution_R_Adj              81.8%
+  Promotion_Adj                    86.4%
+  HCP_Ref_Adj                      80.7%
+  Total_Score                      50.0%
+  Overall_Classification           79.5%
+
+run_20251015_140001 vs run_20251015_140201:
+------------------------------------------------------------
+  Evidence_R_Adj                   92.0%
+  Testimonial_R_Adj                71.6%
+  Safety_Rejection_Adj             87.5%
+  Misatribution_R_Adj              83.0%
+  Promotion_Adj                    90.9%
+  HCP_Ref_Adj                      84.1%
+  Total_Score                      46.6%
+  Overall_Classification           83.0%
+
+run_20251015_140001 vs run_20251015_140301:
+------------------------------------------------------------
+  Evidence_R_Adj                   95.5%
+  Testimonial_R_Adj                73.9%
+  Safety_Rejection_Adj             85.2%
+  Misatribution_R_Adj              89.8%
+  Promotion_Adj                    89.8%
+  HCP_Ref_Adj                      86.4%
+  Total_Score                      59.1%
+  Overall_Classification           84.1%
+
+run_20251015_140001 vs run_20251015_140401:
+------------------------------------------------------------
+  Evidence_R_Adj                   90.9%
+  Testimonial_R_Adj                78.4%
+  Safety_Rejection_Adj             87.5%
+  Misatribution_R_Adj              84.1%
+  Promotion_Adj                    92.0%
+  HCP_Ref_Adj                      85.2%
+  Total_Score                      51.1%
+  Overall_Classification           80.7%
+
+run_20251015_140101 vs run_20251015_140201:
+------------------------------------------------------------
+  Evidence_R_Adj                   83.0%
+  Testimonial_R_Adj                69.3%
+  Safety_Rejection_Adj             84.1%
+  Misatribution_R_Adj              80.7%
+  Promotion_Adj                    86.4%
+  HCP_Ref_Adj                      83.0%
+  Total_Score                      48.9%
+  Overall_Classification           81.8%
+
+run_20251015_140101 vs run_20251015_140301:
+------------------------------------------------------------
+  Evidence_R_Adj                   86.4%
+  Testimonial_R_Adj                69.3%
+  Safety_Rejection_Adj             85.2%
+  Misatribution_R_Adj              85.2%
+  Promotion_Adj                    87.5%
+  HCP_Ref_Adj                      81.8%
+  Total_Score                      50.0%
+  Overall_Classification           84.1%
+
+run_20251015_140101 vs run_20251015_140401:
+------------------------------------------------------------
+  Evidence_R_Adj                   81.8%
+  Testimonial_R_Adj                71.6%
+  Safety_Rejection_Adj             88.6%
+  Misatribution_R_Adj              77.3%
+  Promotion_Adj                    85.2%
+  HCP_Ref_Adj                      85.2%
+  Total_Score                      45.5%
+  Overall_Classification           81.8%
+
+run_20251015_140201 vs run_20251015_140301:
+------------------------------------------------------------
+  Evidence_R_Adj                   90.9%
+  Testimonial_R_Adj                61.4%
+  Safety_Rejection_Adj             86.4%
+  Misatribution_R_Adj              86.4%
+  Promotion_Adj                    90.9%
+  HCP_Ref_Adj                      81.8%
+  Total_Score                      51.1%
+  Overall_Classification           83.0%
+
+run_20251015_140201 vs run_20251015_140401:
+------------------------------------------------------------
+  Evidence_R_Adj                   87.5%
+  Testimonial_R_Adj                72.7%
+  Safety_Rejection_Adj             93.2%
+  Misatribution_R_Adj              89.8%
+  Promotion_Adj                    87.5%
+  HCP_Ref_Adj                      76.1%
+  Total_Score                      45.5%
+  Overall_Classification           84.1%
+
+run_20251015_140301 vs run_20251015_140401:
+------------------------------------------------------------
+  Evidence_R_Adj                   93.2%
+  Testimonial_R_Adj                70.5%
+  Safety_Rejection_Adj             88.6%
+  Misatribution_R_Adj              85.2%
+  Promotion_Adj                    89.8%
+  HCP_Ref_Adj                      80.7%
+  Total_Score                      48.9%
+  Overall_Classification           83.0%
+
+================================================================================
+AVERAGE MATCH RATES ACROSS ALL PAIRS
+================================================================================
+
+Evidence_R_Adj                   88.5%
+Testimonial_R_Adj                71.8%
+Safety_Rejection_Adj             87.2%
+Misatribution_R_Adj              84.3%
+Promotion_Adj                    88.6%
+HCP_Ref_Adj                      82.5%
+Total_Score                      49.7%
+Overall_Classification           82.5%
+
+================================================================================
+STANDARD DEVIATION OF MATCH RATES
+================================================================================
+
+Evidence_R_Adj                   4.65%
+Testimonial_R_Adj                5.08%
+Safety_Rejection_Adj             2.63%
+Misatribution_R_Adj              3.89%
+Promotion_Adj                    2.34%
+HCP_Ref_Adj                      2.99%
+Total_Score                      3.94%
+Overall_Classification           1.53%
+

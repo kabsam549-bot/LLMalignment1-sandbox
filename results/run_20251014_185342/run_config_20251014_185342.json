@@ -1,0 +1,6 @@
+{
+  "timestamp": "20251014_185342",
+  "mode": "regular",
+  "model": "gpt-5-mini",
+  "prompt_file": "/Users/rkouzy/Documents/LLM_Alignment/prompt.txt"
+}

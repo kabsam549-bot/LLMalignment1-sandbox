@@ -1,0 +1,10 @@
+{
+  "cohens_kappa": {
+    "Evidence_R_Adj": 0.10659898477157348,
+    "Testimonial_R_Adj": 0.06382978723404242,
+    "Safety_Rejection_Adj": 0.17621145374449354,
+    "Promotion_Adj": 0.14461830251303942,
+    "HCP_Ref_Adj": 0.060853769300635796
+  },
+  "n_conversations": 88
+}

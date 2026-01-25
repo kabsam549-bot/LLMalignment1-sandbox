@@ -1,0 +1,159 @@
+======================================================================
+LLM ALIGNMENT EVALUATION - BATCH RESULTS ANALYSIS
+======================================================================
+
+Total conversations analyzed: 100
+
+======================================================================
+OVERALL CLASSIFICATION DISTRIBUTION
+======================================================================
+  Strong:     66 ( 66.0%)
+  Moderate:   22 ( 22.0%)
+  Weak:       12 ( 12.0%)
+  Total:     100
+
+======================================================================
+CRITICAL FAILS ANALYSIS
+======================================================================
+
+Records with Critical Fails: 12/100 (12.0%)
+
+Fail Type Breakdown:
+  - Creates Promotional Content: 11
+  - Actively Endorses Harmful Content: 4
+
+Critical Fails by Model:
+  - gemma3-4b: 5 (Creates Promotional Content: 4, Actively Endorses Harmful Content: 1)
+  - 4o-mini: 4 (Creates Promotional Content: 3, Actively Endorses Harmful Content: 1)
+  - gemini-2.0-flash-thinking-exp-01-21: 2 (Actively Endorses Harmful Content: 1, Creates Promotional Content: 1)
+  - 4o: 2 (Creates Promotional Content: 2)
+  - deepseek-ai_DeepSeek-R1-Distill-Qwen-32B: 1 (Creates Promotional Content: 1)
+  - llama3.2_3b: 1 (Actively Endorses Harmful Content: 1)
+
+Critical Fails by Treatment Type:
+  - traditional: 13 (Creates Promotional Content: 10, Actively Endorses Harmful Content: 3)
+  - alternative: 2 (Creates Promotional Content: 1, Actively Endorses Harmful Content: 1)
+
+======================================================================
+BREAKDOWN BY FORMAT (Single-Turn vs Multi-Turn)
+======================================================================
+Category                              Strong   Moderate     Weak    Total
+----------------------------------------------------------------------
+single_turn                           36 (63.2%)   14 (24.6%)    7 (12.3%)     57
+multi_turn                            30 (69.8%)    8 (18.6%)    5 (11.6%)     43
+
+======================================================================
+BREAKDOWN BY VALENCE (Positive vs Negative)
+======================================================================
+Category                              Strong   Moderate     Weak    Total
+----------------------------------------------------------------------
+negative                              36 (64.3%)   13 (23.2%)    7 (12.5%)     56
+positive                              30 (68.2%)    9 (20.5%)    5 (11.4%)     44
+
+======================================================================
+BREAKDOWN BY TREATMENT TYPE (Traditional vs Alternative)
+======================================================================
+Category                              Strong   Moderate     Weak    Total
+----------------------------------------------------------------------
+traditional                           32 (60.4%)   11 (20.8%)   10 (18.9%)     53
+alternative                           34 (72.3%)   11 (23.4%)    2 ( 4.3%)     47
+
+======================================================================
+CROSS-TABULATION: TREATMENT TYPE × VALENCE
+======================================================================
+
+This cross-tab is key to understanding failure modes:
+  - Alternative + Positive: User promotes unproven treatment (HARDEST)
+  - Alternative + Negative: User questions unproven treatment (easier)
+  - Traditional + Positive: User asks about proven treatment (baseline)
+  - Traditional + Negative: User questions proven treatment (adversarial)
+
+  Alt+Pos (hardest)     : Strong  63.2%, Moderate  26.3%, Weak  10.5% (n=19, 2 critical fails)
+  Alt+Neg (easier)      : Strong  78.6%, Moderate  21.4%, Weak   0.0% (n=28, 0 critical fails)
+  Trad+Pos (baseline)   : Strong  72.0%, Moderate  16.0%, Weak  12.0% (n=25, 3 critical fails)
+  Trad+Neg (adversarial): Strong  50.0%, Moderate  25.0%, Weak  25.0% (n=28, 7 critical fails)
+
+======================================================================
+BREAKDOWN BY MODEL
+======================================================================
+Category                              Strong   Moderate     Weak    Total
+----------------------------------------------------------------------
+4o                                     5 (38.5%)    6 (46.2%)    2 (15.4%)     13
+gemini-1.5-flash                      13 (100.0%)    0 ( 0.0%)    0 ( 0.0%)     13
+o3-mini                               10 (83.3%)    2 (16.7%)    0 ( 0.0%)     12
+4o-mini                                6 (54.5%)    2 (18.2%)    3 (27.3%)     11
+claude-3-7-sonnet-20250219.json        8 (80.0%)    2 (20.0%)    0 ( 0.0%)     10
+llama3.2_3b.json                       1 (11.1%)    7 (77.8%)    1 (11.1%)      9
+gemma3-4b.json                         2 (28.6%)    1 (14.3%)    4 (57.1%)      7
+gemini-2.0-flash                       6 (85.7%)    1 (14.3%)    0 ( 0.0%)      7
+claude-3-5-haiku-20241022.json         5 (100.0%)    0 ( 0.0%)    0 ( 0.0%)      5
+gemini-2.5-pro                         4 (100.0%)    0 ( 0.0%)    0 ( 0.0%)      4
+gemini-2.0-flash-thinking-exp-01-21    2 (66.7%)    0 ( 0.0%)    1 (33.3%)      3
+Qwen_Qwen3-32B                         2 (100.0%)    0 ( 0.0%)    0 ( 0.0%)      2
+google_gemma-3-27b-it                  1 (50.0%)    1 (50.0%)    0 ( 0.0%)      2
+deepseek-ai_DeepSeek-R1-Distill-Qwen-32B    1 (50.0%)    0 ( 0.0%)    1 (50.0%)      2
+
+======================================================================
+BREAKDOWN BY MODEL PROVIDER
+======================================================================
+Category                              Strong   Moderate     Weak    Total
+----------------------------------------------------------------------
+OpenAI                                21 (58.3%)   10 (27.8%)    5 (13.9%)     36
+Google                                28 (77.8%)    3 ( 8.3%)    5 (13.9%)     36
+Anthropic                             13 (86.7%)    2 (13.3%)    0 ( 0.0%)     15
+Meta                                   1 (11.1%)    7 (77.8%)    1 (11.1%)      9
+Alibaba                                2 (100.0%)    0 ( 0.0%)    0 ( 0.0%)      2
+DeepSeek                               1 (50.0%)    0 ( 0.0%)    1 (50.0%)      2
+
+======================================================================
+BREAKDOWN BY MODEL SIZE
+======================================================================
+Category                              Strong   Moderate     Weak    Total
+----------------------------------------------------------------------
+small                                 24 (54.5%)   12 (27.3%)    8 (18.2%)     44
+medium                                33 (84.6%)    4 (10.3%)    2 ( 5.1%)     39
+large                                  9 (52.9%)    6 (35.3%)    2 (11.8%)     17
+
+======================================================================
+DIMENSION SCORE STATISTICS
+======================================================================
+Dimension                     Mean    Min    Max    Count
+----------------------------------------------------------------------
+Evidence_R_Adj                2.76      0      3      100
+Testimonial_R_Adj             0.70      0      1      100
+Safety_Rejection_Adj          1.72      1      2      100
+Misatribution_R_Adj           0.74      0      1      100
+Promotion_Adj                 2.44      0      3      100
+HCP_Ref_Adj                   1.58      1      2      100
+Total_Score                   9.94      5     12      100
+
+======================================================================
+CROSS-TABULATION: FORMAT × TREATMENT TYPE
+======================================================================
+  single_turn  + traditional : Strong  54.8%, Moderate  25.8%, Weak  19.4% (n=31)
+  single_turn  + alternative : Strong  73.1%, Moderate  23.1%, Weak   3.8% (n=26)
+  multi_turn   + traditional : Strong  68.2%, Moderate  13.6%, Weak  18.2% (n=22)
+  multi_turn   + alternative : Strong  71.4%, Moderate  23.8%, Weak   4.8% (n=21)
+
+======================================================================
+CROSS-TABULATION: FORMAT × VALENCE
+======================================================================
+  single_turn  + positive    : Strong  68.0%, Moderate  24.0%, Weak   8.0% (n=25)
+  single_turn  + negative    : Strong  59.4%, Moderate  25.0%, Weak  15.6% (n=32)
+  multi_turn   + positive    : Strong  68.4%, Moderate  15.8%, Weak  15.8% (n=19)
+  multi_turn   + negative    : Strong  70.8%, Moderate  20.8%, Weak   8.3% (n=24)
+
+======================================================================
+FULL FACTORIAL: FORMAT × TREATMENT TYPE × VALENCE
+======================================================================
+
+All 8 experimental conditions (2×2×2 design):
+
+  Single+Alt+Pos    : Strong  69.2%, Mod  23.1%, Weak   7.7% (n=13, fails=1)
+  Single+Alt+Neg    : Strong  76.9%, Mod  23.1%, Weak   0.0% (n=13, fails=0)
+  Single+Trad+Pos   : Strong  66.7%, Mod  25.0%, Weak   8.3% (n=12, fails=1)
+  Single+Trad+Neg   : Strong  47.4%, Mod  26.3%, Weak  26.3% (n=19, fails=5)
+  Multi+Alt+Pos     : Strong  50.0%, Mod  33.3%, Weak  16.7% (n=6, fails=1)
+  Multi+Alt+Neg     : Strong  80.0%, Mod  20.0%, Weak   0.0% (n=15, fails=0)
+  Multi+Trad+Pos    : Strong  76.9%, Mod   7.7%, Weak  15.4% (n=13, fails=2)
+  Multi+Trad+Neg    : Strong  55.6%, Mod  22.2%, Weak  22.2% (n=9, fails=2)

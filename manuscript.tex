@@ -1,0 +1,497 @@
+\documentclass[12pt]{article}
+
+% Packages for JAMA Oncology formatting
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% JAMA Oncology specific formatting
+\onehalfspacing
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{0pt}
+
+% Title and author information
+\title{User Communication Style Determines LLM Safety in Cancer Counseling}
+\author{%
+    Author One\textsuperscript{1}, 
+    Author Two\textsuperscript{2}, 
+    Author Three\textsuperscript{3}%
+}
+\date{\today}
+
+% Affiliations
+\newcommand{\affiliation}[1]{\textsuperscript{#1}}
+
+\begin{document}
+
+% ============================================
+% TITLE PAGE
+% ============================================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Large\bfseries \title\par}
+    
+    \vspace{1.5cm}
+    
+    {\large
+    \begin{tabular}{c}
+        \author
+    \end{tabular}
+    }
+    
+    \vspace{1cm}
+    
+    {\normalsize
+    \begin{tabular}{c}
+        \affiliation{1}Affiliation One, Department, Institution, City, State, Country \\
+        \affiliation{2}Affiliation Two, Department, Institution, City, State, Country \\
+        \affiliation{3}Affiliation Three, Department, Institution, City, State, Country
+    \end{tabular}
+    }
+    
+    \vspace{2cm}
+    
+    {\normalsize
+    \textbf{Corresponding Author:} \\
+    Name, PhD/MD \\
+    Address \\
+    Email: email@institution.edu \\
+    Phone: (XXX) XXX-XXXX
+    }
+    
+    \vspace{1cm}
+    
+    {\normalsize
+    \textbf{Word Count:} [PLACEHOLDER] \\
+    \textbf{Figures:} [PLACEHOLDER] \\
+    \textbf{Tables:} [PLACEHOLDER] \\
+    \textbf{References:} [PLACEHOLDER]
+    }
+    
+    \vfill
+    
+    {\normalsize
+    \textbf{Running Title:} [PLACEHOLDER - Short version of title] \\
+    \textbf{Keywords:} [PLACEHOLDER - comma-separated keywords]
+    }
+    
+    \vspace{1cm}
+    
+    {\normalsize
+    \textbf{Conflict of Interest:} [PLACEHOLDER] \\
+    \textbf{Funding:} [PLACEHOLDER] \\
+    \textbf{Acknowledgments:} [PLACEHOLDER]
+    }
+    
+\end{titlepage}
+
+\newpage
+
+% ============================================
+% ABSTRACT
+% ============================================
+\begin{abstract}
+    \textbf{Importance:} [PLACEHOLDER - Why this research matters]
+    
+    \textbf{Objective:} [PLACEHOLDER - Main research question/objective]
+    
+    \textbf{Design, Setting, and Participants:} [PLACEHOLDER - Study design, setting, participants]
+    
+    \textbf{Main Outcomes and Measures:} [PLACEHOLDER - Primary and secondary outcomes]
+    
+    \textbf{Results:} [PLACEHOLDER - Key findings with statistics]
+    
+    \textbf{Conclusions and Relevance:} [PLACEHOLDER - Main conclusions and clinical relevance]
+    
+    \textbf{Keywords:} [PLACEHOLDER]
+\end{abstract}
+
+\newpage
+
+% ============================================
+% MAIN TEXT
+% ============================================
+
+\section{Introduction}
+
+[PLACEHOLDER - Introduction content]
+
+\subsection{Background}
+
+[PLACEHOLDER - Background information on the topic]
+
+\subsection{Problem Statement}
+
+[PLACEHOLDER - Statement of the problem being addressed]
+
+\subsection{Research Objectives}
+
+[PLACEHOLDER - Specific research objectives and hypotheses]
+
+\subsection{Significance}
+
+[PLACEHOLDER - Why this research is important]
+
+\newpage
+
+% ============================================
+% METHODS SECTION
+% ============================================
+\section{Methods}
+
+\subsection{Study Design}
+
+We conducted a cross-sectional evaluation study to assess the safety and alignment of large language models (LLMs) when responding to queries about cancer treatments. The study employed a systematic 2×2×2 factorial design to evaluate LLM performance across varied conversation structures (single-turn vs. multi-turn), treatment types (traditional vs. alternative), and user query framings (positive vs. negative valence). Model responses were evaluated using an LLM-as-a-judge approach with GPT-5-mini (OpenAI, San Francisco, CA) applying a structured rubric, and scores were compared against human annotations to assess inter-rater reliability. No Institutional Review Board approval was required because the study involved evaluation of publicly available AI model responses without use of protected health information or human subjects data.
+\subsection{Data Collection}
+
+\subsubsection{Conversation Dataset}
+
+[PLACEHOLDER - Describe the source and characteristics of the conversation dataset]
+\begin{itemize}
+    \item Source: [PLACEHOLDER]
+    \item Time period: [PLACEHOLDER]
+    \item Number of conversations: [PLACEHOLDER]
+    \item Inclusion criteria: [PLACEHOLDER]
+    \item Exclusion criteria: [PLACEHOLDER]
+\end{itemize}
+
+\subsubsection{Human Annotations}
+
+[PLACEHOLDER - Describe the human annotation process]
+\begin{itemize}
+    \item Annotators: [PLACEHOLDER - e.g., ML annotator, RA annotator]
+    \item Annotation process: [PLACEHOLDER]
+    \item Adjudication process: [PLACEHOLDER - if applicable]
+    \item Inter-annotator agreement: [PLACEHOLDER]
+\end{itemize}
+
+\subsection{Evaluation Rubric}
+
+[PLACEHOLDER - Describe the evaluation rubric used]
+
+The evaluation rubric assessed conversations across six dimensions:
+
+\begin{enumerate}
+    \item \textbf{Evidence Accuracy and Contextualization (Evidence\_R\_Adj):} [PLACEHOLDER - Scoring scale 0-3, description]
+    \item \textbf{Testimonial Handling (Testimonial\_R\_Adj):} [PLACEHOLDER - Scoring scale 0-2, description]
+    \item \textbf{Safety Guidance Quality (Safety\_Rejection\_Adj):} [PLACEHOLDER - Scoring scale 0-2, description]
+    \item \textbf{Misattribution Correction (Misatribution\_R\_Adj):} [PLACEHOLDER - Scoring scale 0-1, description]
+    \item \textbf{Promotional Content Response (Promotion\_Adj):} [PLACEHOLDER - Scoring scale 0-3, description]
+    \item \textbf{Healthcare Professional References (HCP\_Ref\_Adj):} [PLACEHOLDER - Scoring scale 0-2, description]
+\end{enumerate}
+
+[PLACEHOLDER - Describe overall classification scheme (Strong/Moderate/Weak)]
+
+\subsection{LLM Evaluation}
+
+\subsubsection{Model Selection}
+
+[PLACEHOLDER - Describe which LLM(s) were used and why]
+\begin{itemize}
+    \item Primary model: [PLACEHOLDER - e.g., GPT-4o-mini]
+    \item Model version: [PLACEHOLDER]
+    \item Rationale for selection: [PLACEHOLDER]
+\end{itemize}
+
+\subsubsection{Prompt Development}
+
+[PLACEHOLDER - Describe the prompt development process]
+\begin{itemize}
+    \item Prompt structure: [PLACEHOLDER]
+    \item Iterative refinement: [PLACEHOLDER]
+    \item Final prompt characteristics: [PLACEHOLDER]
+\end{itemize}
+
+\subsubsection{Evaluation Process}
+
+[PLACEHOLDER - Describe how conversations were evaluated using the LLM]
+\begin{itemize}
+    \item Evaluation mode: [PLACEHOLDER - e.g., batch processing vs. regular mode]
+    \item API configuration: [PLACEHOLDER]
+    \item Quality control measures: [PLACEHOLDER]
+    \item Error handling: [PLACEHOLDER]
+\end{itemize}
+
+\subsubsection{Scoring Algorithm}
+
+[PLACEHOLDER - Describe how LLM responses were converted to numerical scores]
+\begin{itemize}
+    \item Scoring methodology: [PLACEHOLDER]
+    \item Dimension-specific scoring rules: [PLACEHOLDER]
+    \item Overall classification algorithm: [PLACEHOLDER]
+\end{itemize}
+
+\subsection{Statistical Analysis}
+
+\subsubsection{Agreement Metrics}
+
+[PLACEHOLDER - Describe the agreement metrics used]
+
+\paragraph{Fleiss' Kappa}
+[PLACEHOLDER - Description of Fleiss' kappa for 3-way agreement between ML annotator, RA annotator, and LLM]
+
+\paragraph{Cohen's Kappa}
+[PLACEHOLDER - Description of Cohen's kappa for agreement between LLM and adjudicated gold standard]
+
+\paragraph{Agreement Percentages}
+[PLACEHOLDER - Description of percentage-based agreement measures]
+\begin{itemize}
+    \item 3-way match percentage: [PLACEHOLDER]
+    \item LLM vs. any human percentage: [PLACEHOLDER]
+\end{itemize}
+
+\subsubsection{Interpretation Guidelines}
+
+[PLACEHOLDER - Describe how kappa values were interpreted]
+\begin{itemize}
+    \item Kappa interpretation scale: [PLACEHOLDER - e.g., < 0.00: Poor, 0.00-0.20: Slight, etc.]
+    \item Thresholds for acceptable agreement: [PLACEHOLDER]
+\end{itemize}
+
+\subsubsection{Additional Analyses}
+
+[PLACEHOLDER - Describe any additional statistical analyses]
+\begin{itemize}
+    \item Confusion matrices: [PLACEHOLDER]
+    \item Per-dimension analysis: [PLACEHOLDER]
+    \item Overall classification analysis: [PLACEHOLDER]
+    \item Subgroup analyses: [PLACEHOLDER - if applicable]
+\end{itemize}
+
+\subsection{Software and Tools}
+
+[PLACEHOLDER - List software and tools used]
+\begin{itemize}
+    \item Programming language: [PLACEHOLDER - e.g., Python 3.x]
+    \item Key libraries: [PLACEHOLDER - e.g., pandas, scikit-learn, numpy]
+    \item LLM API: [PLACEHOLDER - e.g., OpenAI API]
+    \item Statistical packages: [PLACEHOLDER]
+    \item Visualization tools: [PLACEHOLDER]
+\end{itemize}
+
+\subsection{Ethical Considerations}
+
+[PLACEHOLDER - Describe ethical considerations]
+\begin{itemize}
+    \item IRB approval: [PLACEHOLDER]
+    \item Data privacy: [PLACEHOLDER]
+    \item Informed consent: [PLACEHOLDER - if applicable]
+    \item Data anonymization: [PLACEHOLDER]
+\end{itemize}
+
+\subsection{Limitations}
+
+[PLACEHOLDER - Acknowledge study limitations]
+\begin{itemize}
+    \item [PLACEHOLDER]
+    \item [PLACEHOLDER]
+    \item [PLACEHOLDER]
+\end{itemize}
+
+\newpage
+
+% ============================================
+% RESULTS SECTION
+% ============================================
+\section{Results}
+
+\subsection{Participant Characteristics}
+
+[PLACEHOLDER - Describe the dataset characteristics]
+
+\subsection{Overall Agreement Metrics}
+
+[PLACEHOLDER - Present overall agreement results]
+
+\subsection{Per-Dimension Analysis}
+
+[PLACEHOLDER - Present results for each rubric dimension]
+
+\subsubsection{Evidence Accuracy and Contextualization}
+
+[PLACEHOLDER]
+
+\subsubsection{Testimonial Handling}
+
+[PLACEHOLDER]
+
+\subsubsection{Safety Guidance Quality}
+
+[PLACEHOLDER]
+
+\subsubsection{Misattribution Correction}
+
+[PLACEHOLDER]
+
+\subsubsection{Promotional Content Response}
+
+[PLACEHOLDER]
+
+\subsubsection{Healthcare Professional References}
+
+[PLACEHOLDER]
+
+\subsection{Overall Classification Agreement}
+
+[PLACEHOLDER - Present results for overall classification (Strong/Moderate/Weak)]
+
+\subsection{Confusion Matrix Analysis}
+
+[PLACEHOLDER - Describe confusion matrix findings]
+
+\subsection{Subgroup Analyses}
+
+[PLACEHOLDER - If applicable, present subgroup analyses]
+
+\newpage
+
+% ============================================
+% DISCUSSION SECTION
+% ============================================
+\section{Discussion}
+
+\subsection{Principal Findings}
+
+[PLACEHOLDER - Summarize main findings]
+
+\subsection{Comparison with Prior Literature}
+
+[PLACEHOLDER - Compare findings with existing literature]
+
+\subsection{Clinical Implications}
+
+[PLACEHOLDER - Discuss clinical relevance and implications]
+
+\subsection{Strengths and Limitations}
+
+[PLACEHOLDER - Discuss study strengths and limitations]
+
+\subsection{Future Directions}
+
+[PLACEHOLDER - Suggest future research directions]
+
+\newpage
+
+% ============================================
+% CONCLUSIONS
+% ============================================
+\section{Conclusions}
+
+[PLACEHOLDER - Main conclusions]
+
+\newpage
+
+% ============================================
+% ACKNOWLEDGMENTS
+% ============================================
+\section*{Acknowledgments}
+
+[PLACEHOLDER - Acknowledgments]
+
+\newpage
+
+% ============================================
+% REFERENCES
+% ============================================
+\bibliographystyle{jama}
+\bibliography{references}
+
+% If you prefer to use manual references, uncomment below and comment out the \bibliography command above
+% \begin{thebibliography}{99}
+%     \bibitem{ref1} [PLACEHOLDER - Reference 1]
+%     \bibitem{ref2} [PLACEHOLDER - Reference 2]
+%     \bibitem{ref3} [PLACEHOLDER - Reference 3]
+% \end{thebibliography}
+
+\newpage
+
+% ============================================
+% FIGURES
+% ============================================
+\section*{Figures}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{[PLACEHOLDER - path to figure]}
+    \caption{[PLACEHOLDER - Figure caption]}
+    \label{fig:figure1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{[PLACEHOLDER - path to figure]}
+    \caption{[PLACEHOLDER - Figure caption]}
+    \label{fig:figure2}
+\end{figure}
+
+% Add more figures as needed
+
+\newpage
+
+% ============================================
+% TABLES
+% ============================================
+\section*{Tables}
+
+\begin{table}[H]
+    \centering
+    \caption{[PLACEHOLDER - Table caption]}
+    \label{tab:table1}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\
+        \midrule
+        [PLACEHOLDER] & [PLACEHOLDER] & [PLACEHOLDER] \\
+        [PLACEHOLDER] & [PLACEHOLDER] & [PLACEHOLDER] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{[PLACEHOLDER - Table caption]}
+    \label{tab:table2}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\
+        \midrule
+        [PLACEHOLDER] & [PLACEHOLDER] & [PLACEHOLDER] \\
+        [PLACEHOLDER] & [PLACEHOLDER] & [PLACEHOLDER] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% Add more tables as needed
+
+\newpage
+
+% ============================================
+% SUPPLEMENTARY MATERIALS (if needed)
+% ============================================
+\section*{Supplementary Materials}
+
+\subsection*{Supplementary Figure 1}
+
+[PLACEHOLDER]
+
+\subsection*{Supplementary Table 1}
+
+[PLACEHOLDER]
+
+% Add more supplementary materials as needed
+
+\end{document}

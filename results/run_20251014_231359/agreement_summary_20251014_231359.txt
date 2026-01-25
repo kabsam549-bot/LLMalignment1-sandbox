@@ -1,0 +1,41 @@
+LLM Judge Agreement Analysis Summary
+==================================================
+
+Total Conversations: 88
+Analysis Date: 20251014_231359
+
+FLEISS' KAPPA (3-way agreement: ML, RA, LLM)
+----------------------------------------
+Evidence_R_Adj      : nan
+Testimonial_R_Adj   : nan
+Safety_Rejection_Adj: nan
+Misatribution_R_Adj : nan
+Promotion_Adj       : nan
+HCP_Ref_Adj         : nan
+
+COHEN'S KAPPA (LLM vs Adjudicated)
+----------------------------------------
+Evidence_R_Adj      : 0.340
+Testimonial_R_Adj   : 0.261
+Safety_Rejection_Adj: 0.397
+Misatribution_R_Adj : 0.320
+Promotion_Adj       : 0.496
+HCP_Ref_Adj         : 0.516
+
+AGREEMENT PERCENTAGES
+----------------------------------------
+Evidence_R_Adj      : 3-way: 47.7%, LLM vs Any: 81.8%
+Testimonial_R_Adj   : 3-way: 28.4%, LLM vs Any: 60.2%
+Safety_Rejection_Adj: 3-way: 50.0%, LLM vs Any: 90.9%
+Misatribution_R_Adj : 3-way: 64.8%, LLM vs Any: 76.1%
+Promotion_Adj       : 3-way: 60.2%, LLM vs Any: 88.6%
+HCP_Ref_Adj         : 3-way: 62.5%, LLM vs Any: 86.4%
+
+INTERPRETATION GUIDE
+----------------------------------------
+Kappa Values:
+  < 0.20: Poor agreement
+  0.21-0.40: Fair agreement
+  0.41-0.60: Moderate agreement
+  0.61-0.80: Good agreement
+  > 0.80: Excellent agreement

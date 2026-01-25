@@ -1,0 +1,67 @@
+{
+  "title": "Classification Transitions Under Misconception Framing",
+  "description": "Flow from Evidence-aligned classification to Misconception framing classification",
+  "transitions": {
+    "Strong->Strong": 332,
+    "Strong->Moderate": 54,
+    "Strong->Weak": 43,
+    "Moderate->Strong": 48,
+    "Moderate->Moderate": 35,
+    "Moderate->Weak": 27,
+    "Weak->Strong": 13,
+    "Weak->Moderate": 9,
+    "Weak->Weak": 8
+  },
+  "totals": {
+    "Strong": 429,
+    "Moderate": 110,
+    "Weak": 30
+  },
+  "flows": [
+    {
+      "source": "Strong",
+      "target": "Strong",
+      "value": 332
+    },
+    {
+      "source": "Strong",
+      "target": "Moderate",
+      "value": 54
+    },
+    {
+      "source": "Strong",
+      "target": "Weak",
+      "value": 43
+    },
+    {
+      "source": "Moderate",
+      "target": "Strong",
+      "value": 48
+    },
+    {
+      "source": "Moderate",
+      "target": "Moderate",
+      "value": 35
+    },
+    {
+      "source": "Moderate",
+      "target": "Weak",
+      "value": 27
+    },
+    {
+      "source": "Weak",
+      "target": "Strong",
+      "value": 13
+    },
+    {
+      "source": "Weak",
+      "target": "Moderate",
+      "value": 9
+    },
+    {
+      "source": "Weak",
+      "target": "Weak",
+      "value": 8
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+================================================================================
+LLM JUDGE EVALUATION - AGREEMENT ANALYSIS SUMMARY
+================================================================================
+
+Total conversations analyzed: 88
+
+FLEISS' KAPPA (3-way: ML, RA, LLM)
+--------------------------------------------------------------------------------
+Evidence_R_Adj                : κ =  0.107  (Slight)
+Testimonial_R_Adj             : κ =  0.066  (Slight)
+Safety_Rejection_Adj          : κ =  0.264  (Fair)
+Promotion_Adj                 : κ =  0.087  (Slight)
+HCP_Ref_Adj                   : κ =  0.093  (Slight)
+Overall_Classification        : κ =  0.080  (Slight)
+
+COHEN'S KAPPA (LLM vs Adjudicated Gold Standard)
+--------------------------------------------------------------------------------
+Evidence_R_Adj                : κ =  0.056  (Slight)
+Testimonial_R_Adj             : κ =  0.095  (Slight)
+Safety_Rejection_Adj          : κ =  0.327  (Fair)
+Promotion_Adj                 : κ =  0.079  (Slight)
+HCP_Ref_Adj                   : κ =  0.056  (Slight)
+
+AGREEMENT PERCENTAGES
+--------------------------------------------------------------------------------
+Dimension                      LLM=ML          LLM=RA          LLM=EITHER        ALL 3 AGREE    
+--------------------------------------------------------------------------------
+Evidence R Adj                 45/88 ( 51.1%)  43/88 ( 48.9%)  57/88 ( 64.8%)    31/88 ( 35.2%) 
+Testimonial R Adj              16/88 ( 18.2%)  35/88 ( 39.8%)  40/88 ( 45.5%)    11/88 ( 12.5%) 
+Safety Rejection Adj           60/88 ( 68.2%)  60/88 ( 68.2%)  76/88 ( 86.4%)    44/88 ( 50.0%) 
+Promotion Adj                  36/88 ( 40.9%)  41/88 ( 46.6%)  44/88 ( 50.0%)    33/88 ( 37.5%) 
+HCP Ref Adj                    33/88 ( 37.5%)  44/88 ( 50.0%)  48/88 ( 54.5%)    29/88 ( 33.0%) 
+Overall Classification         35/88 ( 39.8%)  37/88 ( 42.0%)  49/88 ( 55.7%)    23/88 ( 26.1%) 
+
+================================================================================
+Kappa Interpretation:
+  < 0.00: Poor
+  0.00-0.20: Slight
+  0.21-0.40: Fair
+  0.41-0.60: Moderate
+  0.61-0.80: Substantial
+  0.81-1.00: Almost Perfect

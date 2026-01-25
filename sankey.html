@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div id="sankey" style="width:1000px;height:600px;"></div>
+  <script>
+    var data = {
+      type: "sankey",
+      orientation: "h",
+      node: {
+        pad: 15,
+        thickness: 30,
+        line: { color: "black", width: 0.5 },
+        label: ["Strong (Reg)", "Moderate (Reg)", "Weak (Reg)", "Strong (Mis)", "Moderate (Mis)", "Weak (Mis)"],
+        color: ["#2E7D32", "#F57C00", "#C62828", "#2E7D32", "#F57C00", "#C62828"]
+      },
+      link: {
+        source: [0, 0, 0, 1, 1, 1, 2, 2, 2],
+        target: [3, 4, 5, 3, 4, 5, 3, 4, 5],
+        value: [332, 54, 43, 48, 35, 27, 13, 9, 8],
+        color: [
+            "rgba(46, 125, 50, 0.4)", "rgba(245, 124, 0, 0.6)", "rgba(198, 40, 40, 0.6)", // From Strong
+            "rgba(46, 125, 50, 0.4)", "rgba(245, 124, 0, 0.4)", "rgba(198, 40, 40, 0.6)", // From Mod
+            "rgba(46, 125, 50, 0.4)", "rgba(245, 124, 0, 0.4)", "rgba(198, 40, 40, 0.4)"  // From Weak
+        ]
+      }
+    };
+
+    var layout = {
+      title: { text: "Safety Shift: Regular vs Misinformation Framing", font: { size: 24 } },
+      font: { size: 14 }
+    };
+
+    Plotly.newPlot('sankey', [data], layout);
+  </script>
+</body>
+</html>

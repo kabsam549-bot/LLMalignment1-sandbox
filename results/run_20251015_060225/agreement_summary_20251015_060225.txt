@@ -1,0 +1,107 @@
+LLM Judge Agreement Analysis Summary
+================================================================================
+
+Total Conversations: 88
+Analysis Date: 20251015_060225
+
+FLEISS' KAPPA (3-way agreement: ML, RA, LLM)
+--------------------------------------------------------------------------------
+Evidence_R_Adj           : 0.172
+Testimonial_R_Adj        : 0.570
+Safety_Rejection_Adj     : 0.304
+Misatribution_R_Adj      : 0.473
+Promotion_Adj            : 0.364
+HCP_Ref_Adj              : 0.521
+
+COHEN'S KAPPA (LLM vs Adjudicated)
+--------------------------------------------------------------------------------
+Evidence_R_Adj           : 0.251
+Testimonial_R_Adj        : 0.404
+Safety_Rejection_Adj     : 0.425
+Misatribution_R_Adj      : 0.311
+Promotion_Adj            : 0.452
+HCP_Ref_Adj              : 0.560
+
+PAIRWISE PERCENTAGE AGREEMENT
+--------------------------------------------------------------------------------
+Dimension                      RA↔ML     RA↔LLM     ML↔LLM
+--------------------------------------------------------------------------------
+Evidence_R_Adj                 60.2%      62.5%      64.8%
+Testimonial_R_Adj              77.3%      81.8%      81.8%
+Safety_Rejection_Adj           56.8%      76.1%      65.9%
+Misatribution_R_Adj            88.6%      73.9%      69.3%
+Promotion_Adj                  68.2%      81.8%      63.6%
+HCP_Ref_Adj                    76.1%      75.0%      76.1%
+
+AGREEMENT PERCENTAGES (3-way & LLM vs Any Human)
+--------------------------------------------------------------------------------
+Evidence_R_Adj           : 3-way: 46.6%, LLM vs Any: 80.7%
+Testimonial_R_Adj        : 3-way: 70.5%, LLM vs Any: 93.2%
+Safety_Rejection_Adj     : 3-way: 50.0%, LLM vs Any: 92.0%
+Misatribution_R_Adj      : 3-way: 65.9%, LLM vs Any: 77.3%
+Promotion_Adj            : 3-way: 59.1%, LLM vs Any: 86.4%
+HCP_Ref_Adj              : 3-way: 63.6%, LLM vs Any: 87.5%
+
+OVERALL CLASSIFICATION (Across All 12 Dimensions)
+--------------------------------------------------------------------------------
+LLM vs Any Human (Overall): 86.2%
+Classification: Strong
+Average Dimensions per Conversation: 6.0
+
+OVERALL CONVERSATION CLASSIFICATION AGREEMENT
+--------------------------------------------------------------------------------
+Overall Agreement (LLM vs Adjudicated): 72.7%
+Overall Agreement (LLM vs Any Annotator): 72.7%
+
+Distribution:
+Label        Adjudicated    LLM    Any Annotator
+--------------------------------------------------
+Strong             42       61       65
+Moderate           44       26       22
+Weak                2        1        1
+
+Agreement by Adjudicated Label (LLM vs Adjudicated):
+Label        Count    Agreement
+------------------------------
+Strong           42    95.2%
+Moderate         44    52.3%
+Weak              2    50.0%
+
+Agreement by Any Annotator Label (LLM vs Any Annotator):
+Label        Count    Agreement
+------------------------------
+Strong           65    80.0%
+Moderate         22    54.5%
+Weak              1    0.0%
+
+CLASSIFICATION METRICS (LLM vs Adjudicated)
+--------------------------------------------------------------------------------
+Label        Sensitivity  Specificity  Precision    F1
+------------------------------------------------------------
+Strong          0.952      0.543      0.656    0.777
+Moderate        0.523      0.932      0.885    0.657
+Weak            0.500      1.000      1.000    0.667
+
+CLASSIFICATION METRICS (LLM vs Any Annotator)
+--------------------------------------------------------------------------------
+Label        Sensitivity  Specificity  Precision    F1
+------------------------------------------------------------
+Strong          0.800      0.609      0.852    0.825
+Moderate        0.545      0.788      0.462    0.500
+Weak            0.000      0.989      0.000    0.000
+
+OVERALL CLASSIFICATION METRICS (Macro-Averaged)
+--------------------------------------------------------------------------------
+Comparison              Sensitivity  Specificity  Precision    F1
+----------------------------------------------------------------------
+LLM vs Adjudicated        0.658      0.825      0.847    0.700
+LLM vs Any Annotator      0.448      0.795      0.438    0.442
+
+INTERPRETATION GUIDE
+--------------------------------------------------------------------------------
+Kappa Values:
+  < 0.20: Poor agreement
+  0.21-0.40: Fair agreement
+  0.41-0.60: Moderate agreement
+  0.61-0.80: Good agreement
+  > 0.80: Excellent agreement

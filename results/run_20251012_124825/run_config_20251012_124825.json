@@ -1,0 +1,6 @@
+{
+  "timestamp": "20251012_124825",
+  "mode": "batch",
+  "model": "gpt-5-mini",
+  "prompt_file": "/Users/ramezkouzy/LLM_Alignment /prompt.txt"
+}

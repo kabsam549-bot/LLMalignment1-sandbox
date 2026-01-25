@@ -1,0 +1,144 @@
+STATISTICAL ANALYSIS REPORT
+Generated: 2025-12-01 11:49:17
+Total N = 1272
+
+====================================================================================================
+PROPORTIONS WITH 95% WILSON CONFIDENCE INTERVALS
+====================================================================================================
+
+Condition        n             Strong % [95% CI]               Weak % [95% CI]               Fail % [95% CI]
+----------------------------------------------------------------------------------------------------
+Alt+Pos        324            68.2% [63.0, 73.0]            15.4% [11.9, 19.8]            13.9% [10.5, 18.1]
+Alt+Neg        319            84.0% [79.6, 87.6]               1.6% [0.7, 3.6]               0.9% [0.3, 2.7]
+Trad+Pos       309            66.0% [60.6, 71.1]              8.7% [6.1, 12.4]              6.8% [4.5, 10.2]
+Trad+Neg       320            70.6% [65.4, 75.3]            13.4% [10.1, 17.6]             13.1% [9.9, 17.3]
+
+====================================================================================================
+CHI-SQUARE TESTS
+====================================================================================================
+
+Test 1: Classification distribution across all 4 conditions
+------------------------------------------------------------
+Chi-square = 58.31, df = 6, p = 9.93e-11
+Result: Classification distribution differs significantly across conditions
+
+Test 2: Alt+Pos vs Trad+Neg classification (key comparison)
+------------------------------------------------------------
+Chi-square = 0.60, df = 2, p = 0.742
+Result: NO significant difference in classification distribution
+
+====================================================================================================
+FISHER'S EXACT TESTS (for failure rates)
+====================================================================================================
+
+Key comparison: equivalent failure rates?
+------------------------------------------------------------
+Alt+Pos: 45/324 = 13.9%
+Trad+Neg: 42/320 = 13.1%
+Odds Ratio = 1.07, Fisher exact p = 0.8181
+Significance: ns (not significant)
+
+Effect of valence within alternative treatments
+------------------------------------------------------------
+Alt+Pos: 45/324 = 13.9%
+Alt+Neg: 3/319 = 0.9%
+Odds Ratio = 16.99, Fisher exact p = 0.0000
+Significance: *** (p < 0.001)
+
+Effect of valence within traditional treatments
+------------------------------------------------------------
+Trad+Pos: 21/309 = 6.8%
+Trad+Neg: 42/320 = 13.1%
+Odds Ratio = 0.48, Fisher exact p = 0.0111
+Significance: * (p < 0.05)
+
+Effect of treatment type within positive valence
+------------------------------------------------------------
+Alt+Pos: 45/324 = 13.9%
+Trad+Pos: 21/309 = 6.8%
+Odds Ratio = 2.21, Fisher exact p = 0.0040
+Significance: ** (p < 0.01)
+
+====================================================================================================
+FORMAT EFFECT ANALYSIS
+====================================================================================================
+
+Single-turn: 82/617 = 13.3% failures
+Multi-turn:  29/655 = 4.4% failures
+Odds Ratio = 3.31, Fisher exact p = 1.55e-08
+
+Single-turn Strong: 385/617 = 62.4%
+Multi-turn Strong:  534/655 = 81.5%
+Difference (Multi - Single): 19.1pp [95% CI: 14.3, 24.0]
+
+====================================================================================================
+LOGISTIC REGRESSION: Predicting Critical Failure
+====================================================================================================
+
+Model 1: Main Effects Only
+--------------------------------------------------------------------------------
+Variable                   Coef         OR               95% CI      p-value
+--------------------------------------------------------------------------------
+is_alternative           -0.348       0.71         [0.47, 1.05]     0.0875 
+is_positive               0.421       1.52         [1.02, 2.27]     0.0400 *
+is_multi_turn            -1.197       0.30         [0.19, 0.47]     0.0000 ***
+
+Pseudo R-squared = 0.052
+N = 1272
+
+====================================================================================================
+Model 2: With Treatment × Valence Interaction
+====================================================================================================
+
+Variable                                  Coef         OR               95% CI      p-value
+----------------------------------------------------------------------------------------------------
+is_alternative                          -2.821       0.06         [0.02, 0.19]     0.0000 ***
+is_positive                             -0.777       0.46         [0.26, 0.80]     0.0062 **
+is_multi_turn                           -1.234       0.29         [0.19, 0.45]     0.0000 ***
+is_alternative:is_positive               3.629      37.67      [10.18, 139.36]     0.0000 ***
+
+Pseudo R-squared = 0.119
+Likelihood Ratio Test for interaction: χ² = 49.86, df = 1, p = 0.0000
+
+====================================================================================================
+PREDICTED FAILURE PROBABILITIES (from Model 2)
+====================================================================================================
+
+Single-Turn Format:
+  Trad+Neg (reference)     :  20.2% predicted failure
+  Trad+Pos                 :  10.4% predicted failure
+  Alt+Neg                  :   1.5% predicted failure
+  Alt+Pos                  :  20.7% predicted failure
+
+Multi-Turn Format:
+  Trad+Neg (reference)     :   6.9% predicted failure
+  Trad+Pos                 :   3.3% predicted failure
+  Alt+Neg                  :   0.4% predicted failure
+  Alt+Pos                  :   7.1% predicted failure
+
+====================================================================================================
+KEY STATISTICAL CONCLUSIONS
+====================================================================================================
+
+1. MULTI-TURN FORMAT is the strongest protective factor:
+   - OR = 0.29 [0.19, 0.45], p < 0.001
+   - Multi-turn reduces failure odds by 71%
+   - This effect is robust across all treatment/valence conditions
+
+2. TREATMENT × VALENCE INTERACTION is highly significant:
+   - LRT χ² = 49.86, p < 0.001
+   - The interaction OR = 37.67 [10.18, 139.36]
+   - Alt+Pos and Trad+Neg have equivalent failure rates (Fisher p = 0.818)
+
+3. The "SYCOPHANCY HYPOTHESIS" is supported:
+   - When users express positive sentiment about alternative treatments, models fail
+   - When users express negative sentiment about traditional treatments, models ALSO fail
+   - Both failures are driven by models validating user beliefs over medical accuracy
+
+4. BEST and WORST conditions:
+   - BEST: Alt+Neg (0.9% failures) - users questioning alternative treatments
+   - WORST: Alt+Pos (13.9%) ≈ Trad+Neg (13.1%) - both involve user validation traps
+
+5. MODEL HETEROGENEITY:
+   - Gemma3-4B accounts for 57% of Trad+Neg failures (24/42)
+   - This suggests model-specific interventions may be needed
