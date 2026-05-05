@@ -47,7 +47,9 @@ manuscript_complete_v6.tex             → final PDF
 
 `results/` contains 28 timestamped runs. **These are *not* the main analysis** — they are LLM-judge-vs-human-annotator agreement runs (Fleiss/Cohen kappa) supporting the validation reported in **Appendix 3** of the manuscript. They use a small pilot subset, not the full 1,272.
 
-The canonical kappa run cited in the manuscript has not yet been identified. **TODO:** locate and label it; archive the rest.
+**Canonical kappa run identified:** `results/run_20251015_060225/` — latest run, fullest output, matches manuscript Evidence (80.7%) and Safety (92.0%) numbers exactly. `run_20251014_205608/` kept as backup. The other 23 earlier runs are archived at `archive/judge_validation_runs/`. See `results/README.md` for details.
+
+Caveat: the manuscript's exact "Overall: 81.8%" was not directly recoverable from any single run — appears hand-assembled across passes. Expect minor reconciliation if Appendix 3 needs re-derivation.
 
 ---
 
