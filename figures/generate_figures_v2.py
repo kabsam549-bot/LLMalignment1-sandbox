@@ -61,12 +61,12 @@ def setup_jama_style():
         # Font
         'font.family': 'sans-serif',
         'font.sans-serif': ['Arial', 'Helvetica Neue', 'DejaVu Sans'],
-        'font.size': 10,
-        'axes.labelsize': 11,
-        'axes.titlesize': 12,
-        'xtick.labelsize': 10,
-        'ytick.labelsize': 10,
-        'legend.fontsize': 9,
+        'font.size': 12,
+        'axes.labelsize': 13,
+        'axes.titlesize': 14,
+        'xtick.labelsize': 12,
+        'ytick.labelsize': 12,
+        'legend.fontsize': 11,
         
         # Axes
         'axes.spines.top': False,
