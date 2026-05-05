@@ -17,10 +17,11 @@ Cross-sectional evaluation of **14 LLMs across 6 providers** on **1,272 oncology
 
 ## Live state of the manuscript
 
-- **Live file:** `manuscript_complete_v6.tex` (32.9 KB, JAMA Oncology format).
-- **Earlier versions** (`manuscript.tex`, `manuscript_v2.tex`, `manuscript_complete.tex`, `manuscript_complete_v3/v4/v5.tex`, `manuscript_final.tex`) are superseded. They use an older "Stress Testing" framing; v6 uses the "Sycophancy" reframe. Don't edit them — they exist for traceability only.
-- **Active revision pass:** `REVISION_TRACKER.md` lists open edits Ramez requested. Discussion sections 4.1–4.6 and Tables 1/3 restructure are mid-flight. Read this file before touching the Discussion or Tables.
-- **Submission status:** Unknown — confirm with Ramez. Drafting status assumed.
+- **Live file:** `manuscript_v7.tex` — incorporates Bitterman's 2026-02-05 review of the Overleaf project. New title: *"Validation Bias in AI Cancer Counseling: A Cross-Sectional Study of Large Language Model Responses."* Kouzy is corresponding author. See **`BITTERMAN_REVIEW.md`** for what's done and what's open.
+- **Predecessor in repo:** `manuscript_complete_v6.tex` — pre-Bitterman, "Sycophancy in Medical AI" framing. Kept for traceability. Don't edit.
+- **Earlier versions** (`manuscript.tex`, `manuscript_v2.tex`, `manuscript_complete.tex`, `manuscript_complete_v3/v4/v5.tex`, `manuscript_final.tex`) are in `archive/manuscripts/`.
+- **Active revision passes:** `REVISION_TRACKER.md` (older Ramez feedback against v6) and **`BITTERMAN_REVIEW.md`** (current — Bitterman's 30 comments, 8 done, 8 open in v7).
+- **Submission status:** Drafting. JAMA Oncology target.
 
 ---
 
@@ -77,10 +78,10 @@ Smoke-tested 2026-05-05: both scripts succeed. The Sankey output prints `Degrada
 ### Recompile the manuscript
 
 ```bash
-pdflatex manuscript_complete_v6.tex
-bibtex manuscript_complete_v6
-pdflatex manuscript_complete_v6.tex
-pdflatex manuscript_complete_v6.tex
+pdflatex manuscript_v7.tex
+bibtex manuscript_v7
+pdflatex manuscript_v7.tex
+pdflatex manuscript_v7.tex
 ```
 
 Requires TeXLive (or MacTeX) installed locally. Bibliography is `references.bib`, style is `unsrt` (chronological by appearance — Ramez's choice).
