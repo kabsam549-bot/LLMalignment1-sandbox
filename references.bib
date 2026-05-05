@@ -1,421 +1,1481 @@
-% Bibliography file for Stress Testing LLMs manuscript
-% Generated: 2026-01-24 02:00 CST
-
-% ============================================
-% LLMs in Clinical Medicine
-% ============================================
-
-@article{singhal2023large,
-  title={Large language models encode clinical knowledge},
-  author={Singhal, Karan and Azizi, Shekoofeh and Tu, Tao and Mahdavi, S Sara and Wei, Jason and Chung, Hyung Won and Scales, Nathan and others},
-  journal={Nature},
-  volume={620},
-  number={7972},
-  pages={172--180},
-  year={2023},
-  publisher={Nature Publishing Group},
-  doi={10.1038/s41586-023-06291-2},
-  pmid={37438534}
+@ARTICLE{Natan2026-uv,
+  title         = "Not your typical sycophant: The elusive nature of sycophancy
+                   in Large language models",
+  author        = "Natan, Shahar Ben and Tsur, Oren",
+  journal       = "arXiv [cs.AI]",
+  abstract      = "We propose a novel way to evaluate sycophancy of LLMs in a
+                   direct and neutral way, mitigating various forms of
+                   uncontrolled bias, noise, or manipulative language,
+                   deliberately injected to prompts in prior works. A key
+                   novelty in our approach is the use of LLM-as-a-judge,
+                   evaluation of sycophancy as a zero-sum game in a bet setting.
+                   Under this framework, sycophancy serves one individual (the
+                   user) while explicitly incurring cost on another. Comparing
+                   four leading models - Gemini 2.5 Pro, ChatGpt 4o,
+                   Mistral-Large-Instruct-2411, and Claude Sonnet 3.7 - we find
+                   that while all models exhibit sycophantic tendencies in the
+                   common setting, in which sycophancy is self-serving to the
+                   user and incurs no cost on others, Claude and Mistral exhibit
+                   ``moral remorse'' and over-compensate for their sycophancy in
+                   case it explicitly harms a third party. Additionally, we
+                   observed that all models are biased toward the answer
+                   proposed last. Crucially, we find that these two phenomena
+                   are not independent; sycophancy and recency bias interact to
+                   produce `constructive interference' effect, where the
+                   tendency to agree with the user is exacerbated when the
+                   user's opinion is presented last.",
+  month         =  jan,
+  year          =  2026,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.AI"
 }
 
-@article{vanveen2024adapted,
-  title={Adapted large language models can outperform medical experts in clinical text summarization},
-  author={Van Veen, Dave and Van Uden, Cara and Blankemeier, Louis and Delbrouck, Jean-Benoit and Aali, Asad and others},
-  journal={Nature Medicine},
-  volume={30},
-  number={4},
-  pages={1134--1142},
-  year={2024},
-  publisher={Nature Publishing Group},
-  doi={10.1038/s41591-024-02855-5},
-  pmid={38413730}
+@INPROCEEDINGS{Paruchuri2025-ic,
+  title     = "“what’s up, doc?”: Analyzing how users seek health information in
+               large-scale conversational {AI} datasets",
+  author    = "Paruchuri, Akshay and Aziz, Maryam and Vartak, Rohit and Ali,
+               Ayman and Uchehara, Best and Liu, Xin and Chatterjee, Ishan and
+               Agrawal, Monica",
+  editor    = "Christodoulopoulos, Christos and Chakraborty, Tanmoy and Rose,
+               Carolyn and Peng, Violet",
+  booktitle = "Findings of the Association for Computational Linguistics: EMNLP
+               2025",
+  publisher = "Association for Computational Linguistics",
+  address   = "Stroudsburg, PA, USA",
+  pages     = "2312--2336",
+  year      =  2025
 }
 
-@article{zakka2024almanac,
-  title={Almanac--Retrieval-Augmented Language Models for Clinical Medicine},
-  author={Zakka, Cyril and Shad, Rohan and Chaurasia, Akash and Dalal, Alex R and Kim, Jennifer L and others},
-  journal={NEJM AI},
-  volume={1},
-  number={2},
-  year={2024},
-  doi={10.1056/aioa2300068},
-  pmid={38343631}
+@ARTICLE{Chen2025-wu,
+  title     = "When helpfulness backfires: {LLMs} and the risk of false medical
+               information due to sycophantic behavior",
+  author    = "Chen, Shan and Gao, Mingye and Sasse, Kuleen and Hartvigsen,
+               Thomas and Anthony, Brian and Fan, Lizhou and Aerts, Hugo and
+               Gallifant, Jack and Bitterman, Danielle S",
+  journal   = "NPJ Digit. Med.",
+  publisher = "Springer Science and Business Media LLC",
+  volume    =  8,
+  number    =  1,
+  pages     =  605,
+  abstract  = "Large language models (LLMs) exhibit a vulnerability arising from
+               being trained to be helpful: a tendency to comply with illogical
+               requests that would generate false information, even when they
+               have the knowledge to identify the request as illogical. This
+               study investigated this vulnerability in the medical domain,
+               evaluating five frontier LLMs using prompts that misrepresent
+               equivalent drug relationships. We tested baseline sycophancy, the
+               impact of prompts allowing rejection and emphasizing factual
+               recall, and the effects of fine-tuning on a dataset of illogical
+               requests, including out-of-distribution generalization. Results
+               showed high initial compliance (up to 100\%) across all models,
+               prioritizing helpfulness over logical consistency. Prompt
+               engineering and fine-tuning improved performance, improving
+               rejection rates on illogical requests while maintaining general
+               benchmark performance. This demonstrates that prioritizing
+               logical consistency through targeted training and prompting is
+               crucial for mitigating the risk of generating false medical
+               information and ensuring the safe deployment of LLMs in
+               healthcare.",
+  month     =  oct,
+  year      =  2025,
+  language  = "en"
 }
 
-@article{huo2025large,
-  title={Large Language Models for Chatbot Health Advice Studies: A Systematic Review},
-  author={Huo, Benson and Boyle, Adam and Marfo, Nana and Tangamornsuksan, Wuttikorn and others},
-  journal={JAMA Network Open},
-  volume={8},
-  number={2},
-  pages={e2457879},
-  year={2025},
-  doi={10.1001/jamanetworkopen.2024.57879},
-  pmid={39903463}
+@ARTICLE{Sumers2024-nt,
+  title     = "Reconciling truthfulness and relevance as epistemic and
+               decision-theoretic utility",
+  author    = "Sumers, Theodore R and Ho, Mark K and Griffiths, Thomas L and
+               Hawkins, Robert D",
+  journal   = "Psychol. Rev.",
+  publisher = "American Psychological Association (APA)",
+  volume    =  131,
+  number    =  1,
+  pages     = "194--230",
+  abstract  = "People use language to influence others' beliefs and actions. Yet
+               models of communication have diverged along these lines,
+               formalizing the speaker's objective in terms of either the
+               listener's beliefs or actions. We argue that this divergence lies
+               at the root of a longstanding controversy over the Gricean maxims
+               of truthfulness and relevance. We first bridge the divide by
+               introducing a speaker model which considers both the listener's
+               beliefs (epistemic utility) and their actions (decision-theoretic
+               utility). We show that formalizing truthfulness as an epistemic
+               utility and relevance as a decision-theoretic utility reconciles
+               the tension between them, readily explaining puzzles such as
+               context-dependent standards of truthfulness. We then test a set
+               of novel predictions generated by our model. We introduce a new
+               signaling game which decouples utterances' truthfulness and
+               relevance, then use it to conduct a pair of experiments. Our
+               first experiment demonstrates that participants jointly maximize
+               epistemic and decision-theoretic utility, rather than either
+               alone. Our second experiment shows that when the two conflict,
+               participants make a graded tradeoff rather than prioritizing one
+               over the other. These results demonstrate that human
+               communication cannot be reduced to influencing beliefs or actions
+               alone. Taken together, our work provides a new foundation for
+               grounding rational communication not only in what we believe, but
+               in what those beliefs lead us to do. (PsycInfo Database Record
+               (c) 2024 APA, all rights reserved).",
+  month     =  jan,
+  year      =  2024,
+  language  = "en"
 }
 
-@article{shool2025systematic,
-  title={A systematic review of large language model ({LLM}) evaluations in clinical medicine},
-  author={Shool, Sepehr and Adimi, Sajjad and Saboori Amleshi, Reza and others},
-  journal={BMC Medical Informatics and Decision Making},
-  volume={25},
-  number={1},
-  pages={117},
-  year={2025},
-  doi={10.1186/s12911-025-02954-4},
-  pmid={40055694}
+@ARTICLE{Sumers2024-pt,
+  title     = "Reconciling truthfulness and relevance as epistemic and
+               decision-theoretic utility",
+  author    = "Sumers, Theodore R and Ho, Mark K and Griffiths, Thomas L and
+               Hawkins, Robert D",
+  journal   = "Psychol. Rev.",
+  publisher = "American Psychological Association (APA)",
+  volume    =  131,
+  number    =  1,
+  pages     = "194--230",
+  abstract  = "People use language to influence others' beliefs and actions. Yet
+               models of communication have diverged along these lines,
+               formalizing the speaker's objective in terms of either the
+               listener's beliefs or actions. We argue that this divergence lies
+               at the root of a longstanding controversy over the Gricean maxims
+               of truthfulness and relevance. We first bridge the divide by
+               introducing a speaker model which considers both the listener's
+               beliefs (epistemic utility) and their actions (decision-theoretic
+               utility). We show that formalizing truthfulness as an epistemic
+               utility and relevance as a decision-theoretic utility reconciles
+               the tension between them, readily explaining puzzles such as
+               context-dependent standards of truthfulness. We then test a set
+               of novel predictions generated by our model. We introduce a new
+               signaling game which decouples utterances' truthfulness and
+               relevance, then use it to conduct a pair of experiments. Our
+               first experiment demonstrates that participants jointly maximize
+               epistemic and decision-theoretic utility, rather than either
+               alone. Our second experiment shows that when the two conflict,
+               participants make a graded tradeoff rather than prioritizing one
+               over the other. These results demonstrate that human
+               communication cannot be reduced to influencing beliefs or actions
+               alone. Taken together, our work provides a new foundation for
+               grounding rational communication not only in what we believe, but
+               in what those beliefs lead us to do. (PsycInfo Database Record
+               (c) 2024 APA, all rights reserved).",
+  month     =  jan,
+  year      =  2024,
+  language  = "en"
 }
 
-% ============================================
-% AI Chatbots and Cancer Information
-% ============================================
-
-@article{ayers2023comparing,
-  title={Comparing Physician and Artificial Intelligence Chatbot Responses to Patient Questions Posted to a Public Social Media Forum},
-  author={Ayers, John W and Poliak, Adam and Dredze, Mark and Leas, Eric C and Zhu, Zechariah and others},
-  journal={JAMA Internal Medicine},
-  volume={183},
-  number={6},
-  pages={589--596},
-  year={2023},
-  doi={10.1001/jamainternmed.2023.1838},
-  pmid={37115527}
+@ARTICLE{Yu2025-ch,
+  title     = "Simulated patient systems powered by large language model-based
+               {AI} agents offer potential for transforming medical education",
+  author    = "Yu, Huizi and Zhou, Jiayan and Li, Lingyao and Chen, Shan and
+               Gallifant, Jack and Shi, Anye and Sun, Jie and Li, Xiang and He,
+               Jingxian and Hua, Wenyue and Jin, Mingyu and Chen, Guang and
+               Zhou, Yang and Li, Zhao and Gupte, Trisha and Chen, Ming-Li and
+               Azizi, Zahra and Dou, Qi and Yan, Bryan P and Xing, Yanqiu and
+               Zhang, Yongfeng and Assimes, Themistocles L and Bitterman,
+               Danielle S and Ma, Xin and Lu, Lin and Fan, Lizhou",
+  journal   = "Commun. Med. (Lond.)",
+  publisher = "Springer Science and Business Media LLC",
+  volume    =  6,
+  number    =  1,
+  pages     =  27,
+  abstract  = "BACKGROUND: Simulated patient systems are vital in medical
+               education and research, providing safe, integrative training
+               environments and supporting clinical decision-making. Progressive
+               Artificial Intelligence (AI) technologies, such as Large Language
+               Models (LLM), could advance simulated patient systems by
+               replicating medical conditions and patient-doctor interactions
+               with high fidelity and low cost. However, effectiveness and
+               trustworthiness remain challenging. METHODS: We developed
+               AIPatient, a simulated patient system powered by LLM-based AI
+               agents. The system incorporates the Retrieval Augmented
+               Generation (RAG) framework, powered by six task-specific
+               LLM-based AI agents for complex reasoning. For simulation
+               reality, the system is also powered by the AIPatient KG
+               (Knowledge Graph), built with de-identified real patient data
+               from the Medical Information Mart for Intensive Care (MIMIC)-III
+               database. RESULTS: Here we show that the system's accuracy in
+               Electronic Health Record (EHR)-based medical Question Answering
+               (QA), readability, robustness, and stability. Specifically, the
+               system achieves a QA accuracy of 94.15\% when all six agents,
+               surpassing benchmarks with partial or no agent integration. Its
+               knowledgebase demonstrates high validity (F1 score=0.89).
+               Readability scores show median Flesch Reading Ease at 68.77 and
+               median Flesch Kincaid Grade at 6.4, indicating accessibility to
+               all medical professionals. Robustness and stability are confirmed
+               with non-significant variance (ANOVA F-value = 0.6126, p > 0.1;
+               F-value = 0.782, p > 0.1). A user study with medical students
+               shows that AIPatient delivers high fidelity, usability, and
+               educational value, matching or exceeding human-simulated patients
+               in history-taking. CONCLUSIONS: Large language model-based
+               simulated patient systems provide accurate, readable, and
+               reliable medical encounters and demonstrates potential to
+               transform medical education.",
+  month     =  dec,
+  year      =  2025,
+  language  = "en"
 }
 
-@article{pan2023assessment,
-  title={Assessment of Artificial Intelligence Chatbot Responses to Top Searched Queries About Cancer},
-  author={Pan, Alexander and Musheyev, David and Bockelman, David and Loeb, Stacy and Kabarriti, Aaron E},
-  journal={JAMA Oncology},
-  volume={9},
-  number={10},
-  pages={1437--1440},
-  year={2023},
-  doi={10.1001/jamaoncol.2023.2947},
-  pmid={37615960}
+@ARTICLE{Yamamoto2024-yc,
+  title     = "Enhancing medical interview skills through {AI}-simulated patient
+               interactions: Nonrandomized controlled trial",
+  author    = "Yamamoto, Akira and Koda, Masahide and Ogawa, Hiroko and Miyoshi,
+               Tomoko and Maeda, Yoshinobu and Otsuka, Fumio and Ino, Hideo",
+  journal   = "JMIR Med. Educ.",
+  publisher = "JMIR Publications Inc.",
+  volume    =  10,
+  pages     = "e58753",
+  abstract  = "BACKGROUND: Medical interviewing is a critical skill in clinical
+               practice, yet opportunities for practical training are limited in
+               Japanese medical schools, necessitating urgent measures. Given
+               advancements in artificial intelligence (AI) technology, its
+               application in the medical field is expanding. However, reports
+               on its application in medical interviews in medical education are
+               scarce. OBJECTIVE: This study aimed to investigate whether
+               medical students' interview skills could be improved by engaging
+               with AI-simulated patients using large language models, including
+               the provision of feedback. METHODS: This nonrandomized controlled
+               trial was conducted with fourth-year medical students in Japan. A
+               simulation program using large language models was provided to 35
+               students in the intervention group in 2023, while 110 students
+               from 2022 who did not participate in the intervention were
+               selected as the control group. The primary outcome was the score
+               on the Pre-Clinical Clerkship Objective Structured Clinical
+               Examination (pre-CC OSCE), a national standardized clinical
+               skills examination, in medical interviewing. Secondary outcomes
+               included surveys such as the Simulation-Based Training Quality
+               Assurance Tool (SBT-QA10), administered at the start and end of
+               the study. RESULTS: The AI intervention group showed
+               significantly higher scores on medical interviews than the
+               control group (AI group vs control group: mean 28.1, SD 1.6 vs
+               27.1, SD 2.2; P=.01). There was a trend of inverse correlation
+               between the SBT-QA10 and pre-CC OSCE scores (regression
+               coefficient -2.0 to -2.1). No significant safety concerns were
+               observed. CONCLUSIONS: Education through medical interviews using
+               AI-simulated patients has demonstrated safety and a certain level
+               of educational effectiveness. However, at present, the
+               educational effects of this platform on nonverbal communication
+               skills are limited, suggesting that it should be used as a
+               supplementary tool to traditional simulation education.",
+  month     =  sep,
+  year      =  2024,
+  keywords  = "OSCE; artificial intelligence; generative pretrained transformer;
+               large language model; medical education; medical interview;
+               nonrandomized controlled trial; simulated patients;
+               simulation-based learning",
+  language  = "en"
 }
 
-@article{laymouna2024roles,
-  title={Roles, Users, Benefits, and Limitations of Chatbots in Health Care: Rapid Review},
-  author={Laymouna, Maria and Ma, Yuanchao and Lessard, David and Schuster, Tibor and Engler, Kim and Lebouché, Bertrand},
-  journal={Journal of Medical Internet Research},
-  volume={26},
-  pages={e56930},
-  year={2024},
-  doi={10.2196/56930},
-  pmid={39042446}
+@ARTICLE{Chen2025-he,
+  title     = "Large language models in oncology: a review",
+  author    = "Chen, David and Parsa, Rod and Swanson, Karl and Nunez, John-Jose
+               and Critch, Andrew and Bitterman, Danielle S and Liu, Fei-Fei and
+               Raman, Srinivas",
+  journal   = "BMJ Oncol.",
+  publisher = "BMJ",
+  volume    =  4,
+  number    =  1,
+  pages     = "e000759",
+  abstract  = "Large language models (LLMs) have demonstrated emergent
+               human-like capabilities in natural language processing, leading
+               to enthusiasm about their integration in healthcare environments.
+               In oncology, where synthesising complex, multimodal data is
+               essential, LLMs offer a promising avenue for supporting clinical
+               decision-making, enhancing patient care, and accelerating
+               research. This narrative review aims to highlight the current
+               state of LLMs in medicine; applications of LLMs in oncology for
+               clinicians, patients, and translational research; and future
+               research directions. Clinician-facing LLMs enable clinical
+               decision support and enable automated data extraction from
+               electronic health records and literature to inform
+               decision-making. Patient-facing LLMs offer the potential for
+               disseminating accessible cancer information and psychosocial
+               support. However, LLMs face limitations that must be addressed
+               before clinical adoption, including risks of hallucinations, poor
+               generalisation, ethical concerns, and scope integration. We
+               propose the incorporation of LLMs within compound artificial
+               intelligence systems to facilitate adoption and efficiency in
+               oncology. This narrative review serves as a non-technical primer
+               for clinicians to understand, evaluate, and participate as active
+               users who can inform the design and iterative improvement of LLM
+               technologies deployed in oncology settings. While LLMs are not
+               intended to replace oncologists, they can serve as powerful tools
+               to augment clinical expertise and patient-centred care,
+               reinforcing their role as a valuable adjunct in the evolving
+               landscape of oncology.",
+  month     =  may,
+  year      =  2025,
+  keywords  = "Medical oncology",
+  language  = "en"
 }
 
-@article{gortz2023artificial,
-  title={An artificial intelligence-based chatbot for prostate cancer education: Design and patient evaluation study},
-  author={Görtz, Maximilian and Baumgärtner, Katja and Schmid, Theresa and others},
-  journal={Digital Health},
-  volume={9},
-  pages={20552076231173304},
-  year={2023},
-  doi={10.1177/20552076231173304},
-  pmid={37152238}
+@ARTICLE{Peterson2022-ct,
+  title     = "Timing and motivations for alternative cancer therapy with
+               insights from a crowdfunding platform: Cross-sectional mixed
+               methods study",
+  author    = "Peterson, John and Wilson, Trevor and Gruhl, Joshua and Davis,
+               Sydney and Olsen, Jaxon and Parsons, Matthew and Kann, Benjamin
+               and Fagerlin, Angela and Watt, Melissa and Johnson, Skyler",
+  journal   = "JMIR Cancer",
+  publisher = "JMIR Publications Inc.",
+  volume    =  8,
+  number    =  2,
+  pages     = "e34183",
+  abstract  = "BACKGROUND: Alternative cancer therapy is associated with
+               increased mortality, but little is known about those who pursue
+               it. OBJECTIVE: We aimed to describe individuals' motivations for
+               using alternative cancer therapies and determine whether
+               motivations differ based on individuals' timing of seeking
+               alternative therapies. METHODS: We used data from 649 campaigns
+               posted on the website GoFundMe between 2011 and 2019 for
+               beneficiaries with cancer pursuing alternative therapy. The data
+               were analyzed using a mixed methods approach. Campaigns were
+               categorized by timing of alternative therapy (either before or
+               after experiencing conventional therapy). Qualitative analysis
+               identified motivational themes. Chi-square tests of independence
+               and Fisher tests (all 2-sided) determined significant differences
+               in the presence of motivational themes between groups. RESULTS:
+               The expression of concerns about the efficacy of conventional
+               therapy was significantly more likely in campaigns for
+               individuals who used conventional therapy first than in campaigns
+               for individuals who started with alternative therapy (63.3\% vs
+               41.7\%; P<.001). Moreover, on comparing those who started with
+               alternative therapy and those who switched from conventional to
+               alternative therapy, those who started with alternative therapy
+               more often expressed natural and holistic values (49.3\% vs
+               27.0\%; P<.001), expressed an unorthodox understanding of cancer
+               (25.5\% vs 16.4\%; P=.004), referenced religious or spiritual
+               beliefs (15.1\% vs 8.9\%; P=.01), perceived alternative treatment
+               as efficacious (19.1\% vs 10.2\%; P=.001), and distrusted
+               pharmaceutical companies (3.2\% vs 0.5\%; P=.04). CONCLUSIONS:
+               Individuals sought treatments that reflected their values and
+               beliefs, even if scientifically unfounded. Many individuals who
+               reported prior conventional cancer therapy were motivated to
+               pursue alternative treatments because they perceived the
+               conventional treatments to be ineffective.",
+  month     =  jun,
+  year      =  2022,
+  keywords  = "alternative medicine; health misinformation; internet; internet
+               research ethics; online crowdfunding",
+  language  = "en"
 }
 
-% ============================================
-% Alternative Cancer Treatment and Misinformation
-% ============================================
-
-@article{johnson2018alternative,
-  title={Use of Alternative Medicine for Cancer and Its Impact on Survival},
-  author={Johnson, Skyler B and Park, Henry S and Gross, Cary P and Yu, James B},
-  journal={JAMA Oncology},
-  volume={4},
-  number={10},
-  pages={1375--1381},
-  year={2018},
-  doi={10.1001/jamaoncol.2018.2487},
-  note={Seminal paper showing alternative medicine associated with worse cancer survival}
+@ARTICLE{Delgado-Lopez2018-ly,
+  title    = "Influence of Internet and social media in the promotion of
+              alternative oncology, cancer quackery, and the predatory
+              publishing phenomenon",
+  author   = "Delgado-López, Pedro David and Corrales-García, Eva María",
+  journal  = "Cureus",
+  volume   =  10,
+  number   =  5,
+  pages    = "e2617",
+  abstract = "In the last decade, electronic media has irrupted physician's
+              clinical practice. Patients increasingly use Internet and social
+              media to obtain enormous amounts of unsupervised data about
+              cancer. Blogs, social networking sites, online support groups and
+              forums are useful channels for medical education and experience
+              sharing but also perfect environments for misinformation,
+              quackery, violation of privacy and lack of professionalism. The
+              widespread availability of such electronic resources allows some
+              followers of the alternative oncology to spread useless irrational
+              and controversial remedies for cancer, like false medicaments,
+              miraculous diets, electronic devices, and even psychic therapies,
+              as did charlatans in the past, providing false expectations about
+              cancer treatments. Moreover, so-called predatory journals have
+              introduced confusion and malpractice within the academic
+              biomedical publishing system. This is a rising editorial
+              phenomenon affecting all fields of biomedicine, including oncology
+              that jeopardizes the quality of scientific contribution and
+              damages the image of open access publication.",
+  month    =  may,
+  year     =  2018,
+  keywords = "complementary and alternative medicine; internet; oncology;
+              predatory journals; quackery; social media",
+  language = "en"
 }
 
-@article{peterson2023international,
-  title={International medical tourism of {US} cancer patients for alternative cancer treatments: Financial, demographic, and clinical profiles of online crowdfunding campaigns},
-  author={Peterson, Jessica and Wilson, Thomas F and Watt, Melissa H and others},
-  journal={Cancer Medicine},
-  volume={12},
-  number={7},
-  pages={8871--8879},
-  year={2023},
-  doi={10.1002/cam4.5636},
-  pmid={36659856}
+@ARTICLE{Yoon2022-uf,
+  title     = "Understanding the social mechanism of cancer misinformation
+               spread on {YouTube} and lessons learned: Infodemiological study",
+  author    = "Yoon, Ho Young and You, Kyung Han and Kwon, Jung Hye and Kim,
+               Jung Sun and Rha, Sun Young and Chang, Yoon Jung and Lee,
+               Sang-Cheol",
+  journal   = "J. Med. Internet Res.",
+  publisher = "JMIR Publications Inc.",
+  volume    =  24,
+  number    =  11,
+  pages     = "e39571",
+  abstract  = "BACKGROUND: A knowledge gap exists between the list of required
+               actions and the action plan for countering cancer misinformation
+               on social media. Little attention has been paid to a social media
+               strategy for disseminating factual information while also
+               disrupting misinformation on social media networks. OBJECTIVE:
+               The aim of this study was to, first, identify the spread
+               structure of cancer misinformation on YouTube. We asked the
+               question, ``How do YouTube videos play an important role in
+               spreading information about the self-administration of
+               anthelmintics for dogs as a cancer medicine for humans?'' Second,
+               the study aimed to suggest an action strategy for disrupting
+               misinformation diffusion on YouTube by exploiting the network
+               logic of YouTube information flow and the recommendation system.
+               We asked the question, ``What would be a feasible and effective
+               strategy to block cancer misinformation diffusion on YouTube?''
+               METHODS: The study used the YouTube case of the
+               self-administration of anthelmintics for dogs as an alternative
+               cancer medicine in South Korea. We gathered Korean YouTube videos
+               about the self-administration of fenbendazole. Using the YouTube
+               application programming interface for the query ``fenbendazole,''
+               702 videos from 227 channels were compiled. Then, videos with at
+               least 50,000 views, uploaded between September 2019 and September
+               2020, were selected from the collection, resulting in 90 videos.
+               Finally, 10 recommended videos for each of the 90 videos were
+               compiled, totaling 573 videos. Social network visualization for
+               the recommended videos was used to identify three intervention
+               strategies for disrupting the YouTube misinformation network.
+               RESULTS: The study found evidence of complex contagion by human
+               and machine recommendation systems. By exposing stakeholders to
+               multiple information sources on fenbendazole self-administration
+               and by linking them through a recommendation algorithm, YouTube
+               has become the perfect infrastructure for reinforcing the belief
+               that fenbendazole can cure cancer, despite government warnings
+               about the risks and dangers of self-administration. CONCLUSIONS:
+               Health authorities should upload pertinent information through
+               multiple channels and should exploit the existing YouTube
+               recommendation algorithm to disrupt the misinformation network.
+               Considering the viewing habits of patients and caregivers, the
+               direct use of YouTube hospital channels is more effective than
+               the indirect use of YouTube news media channels or government
+               channels that report public announcements and statements.
+               Reinforcing through multiple channels is the key.",
+  month     =  nov,
+  year      =  2022,
+  keywords  = "YouTube; cancer misinformation; complex contagion; fenbendazole;
+               self-administration; social media factual information delivery
+               strategy; social media health misinformation",
+  language  = "en"
 }
 
-@article{yoon2022understanding,
-  title={Understanding the Social Mechanism of Cancer Misinformation Spread on {YouTube} and Lessons Learned: Infodemiological Study},
-  author={Yoon, Hye Young and You, Ki Hyun and Kwon, Jung Hye and others},
-  journal={Journal of Medical Internet Research},
-  volume={24},
-  number={11},
-  pages={e39571},
-  year={2022},
-  doi={10.2196/39571},
-  pmid={36374534}
+@ARTICLE{Mo2026-qf,
+  title         = "Faithfulness vs. Safety: Evaluating {LLM} behavior under
+                   counterfactual medical evidence",
+  author        = "Mo, Kaijie and Venkatayogi, Siddhartha and Shaib, Chantal and
+                   Kouzy, Ramez and Xu, Wei and Wallace, Byron C and Li, Junyi
+                   Jessy",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "In high-stakes domains like medicine, it may be generally
+                   desirable for models to faithfully adhere to the context
+                   provided. But what happens if the context does not align with
+                   model priors or safety protocols? In this paper, we
+                   investigate how LLMs behave and reason when presented with
+                   counterfactual or even adversarial medical evidence. We first
+                   construct MedCounterFact, a counterfactual medical QA dataset
+                   that requires the models to answer clinical comparison
+                   questions (i.e., judge the efficacy of certain treatments,
+                   with evidence consisting of randomized controlled trials
+                   provided as context). In MedCounterFact, real-world medical
+                   interventions within the questions and evidence are
+                   systematically replaced with four types of counterfactual
+                   stimuli, ranging from unknown words to toxic substances. Our
+                   evaluation across multiple frontier LLMs on MedCounterFact
+                   reveals that in the presence of counterfactual evidence,
+                   existing models overwhelmingly accept such ``evidence'' at
+                   face value even when it is dangerous or implausible, and
+                   provide confident and uncaveated answers. While it may be
+                   prudent to draw a boundary between faithfulness and safety,
+                   our findings reveal that there exists no such boundary yet.",
+  month         =  jan,
+  year          =  2026,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL"
 }
 
-@article{delgadolopez2018influence,
-  title={Influence of Internet and Social Media in the Promotion of Alternative Oncology, Cancer Quackery, and the Predatory Publishing Phenomenon},
-  author={Delgado-López, Pedro D and Corrales-García, Eva M},
-  journal={Cureus},
-  volume={10},
-  number={5},
-  pages={e2617},
-  year={2018},
-  doi={10.7759/cureus.2617},
-  pmid={30027009}
+@ARTICLE{Shool2025-dr,
+  title    = "A systematic review of large language model ({LLM}) evaluations in
+              clinical medicine",
+  author   = "Shool, Sina and Adimi, Sara and Saboori Amleshi, Reza and Bitaraf,
+              Ehsan and Golpira, Reza and Tara, Mahmood",
+  journal  = "BMC Med. Inform. Decis. Mak.",
+  volume   =  25,
+  number   =  1,
+  pages    =  117,
+  abstract = "BACKGROUND: Large Language Models (LLMs), advanced AI tools based
+              on transformer architectures, demonstrate significant potential in
+              clinical medicine by enhancing decision support, diagnostics, and
+              medical education. However, their integration into clinical
+              workflows requires rigorous evaluation to ensure reliability,
+              safety, and ethical alignment. OBJECTIVE: This systematic review
+              examines the evaluation parameters and methodologies applied to
+              LLMs in clinical medicine, highlighting their capabilities,
+              limitations, and application trends. METHODS: A comprehensive
+              review of the literature was conducted across PubMed, Scopus, Web
+              of Science, IEEE Xplore, and arXiv databases, encompassing both
+              peer-reviewed and preprint studies. Studies were screened against
+              predefined inclusion and exclusion criteria to identify original
+              research evaluating LLM performance in medical contexts. RESULTS:
+              The results reveal a growing interest in leveraging LLM tools in
+              clinical settings, with 761 studies meeting the inclusion
+              criteria. While general-domain LLMs, particularly ChatGPT and
+              GPT-4, dominated evaluations (93.55\%), medical-domain LLMs
+              accounted for only 6.45\%. Accuracy emerged as the most commonly
+              assessed parameter (21.78\%). Despite these advancements, the
+              evidence base highlights certain limitations and biases across the
+              included studies, emphasizing the need for careful interpretation
+              and robust evaluation frameworks. CONCLUSIONS: The exponential
+              growth in LLM research underscores their transformative potential
+              in healthcare. However, addressing challenges such as ethical
+              risks, evaluation variability, and underrepresentation of critical
+              specialties will be essential. Future efforts should prioritize
+              standardized frameworks to ensure safe, effective, and equitable
+              LLM integration in clinical practice.",
+  month    =  mar,
+  year     =  2025,
+  keywords = "Artificial intelligence in medicine; Clinical medicine; Deep
+              learning in healthcare; LLM evaluation; Large language models;
+              Natural language processing; Systematic review",
+  language = "en"
 }
 
-@article{snyder2024crowdfunding,
-  title={Crowdfunding for Complementary and Alternative Cancer Treatments in {Tijuana}, {Mexico}: Content Analysis},
-  author={Snyder, Jeremy and Zenone, Marco and Grewal, Amanpreet and Caulfield, Timothy},
-  journal={JMIR Cancer},
-  volume={10},
-  pages={e52018},
-  year={2024},
-  doi={10.2196/52018},
-  pmid={39141902}
+@ARTICLE{Huo2025-pz,
+  title    = "Large language models for chatbot health advice studies: A
+              systematic review",
+  author   = "Huo, Bright and Boyle, Amy and Marfo, Nana and Tangamornsuksan,
+              Wimonchat and Steen, Jeremy P and McKechnie, Tyler and Lee, Yung
+              and Mayol, Julio and Antoniou, Stavros A and Thirunavukarasu, Arun
+              James and Sanger, Stephanie and Ramji, Karim and Guyatt, Gordon",
+  journal  = "JAMA Netw. Open",
+  volume   =  8,
+  number   =  2,
+  pages    = "e2457879",
+  abstract = "Importance: There is much interest in the clinical integration of
+              large language models (LLMs) in health care. Many studies have
+              assessed the ability of LLMs to provide health advice, but the
+              quality of their reporting is uncertain. Objective: To perform a
+              systematic review to examine the reporting variability among
+              peer-reviewed studies evaluating the performance of generative
+              artificial intelligence (AI)-driven chatbots for summarizing
+              evidence and providing health advice to inform the development of
+              the Chatbot Assessment Reporting Tool (CHART). Evidence Review: A
+              search of MEDLINE via Ovid, Embase via Elsevier, and Web of
+              Science from inception to October 27, 2023, was conducted with the
+              help of a health sciences librarian to yield 7752 articles. Two
+              reviewers screened articles by title and abstract followed by
+              full-text review to identify primary studies evaluating the
+              clinical accuracy of generative AI-driven chatbots in providing
+              health advice (chatbot health advice studies). Two reviewers then
+              performed data extraction for 137 eligible studies. Findings: A
+              total of 137 studies were included. Studies examined topics in
+              surgery (55 [40.1\%]), medicine (51 [37.2\%]), and primary care
+              (13 [9.5\%]). Many studies focused on treatment (91 [66.4\%]),
+              diagnosis (60 [43.8\%]), or disease prevention (29 [21.2\%]). Most
+              studies (136 [99.3\%]) evaluated inaccessible, closed-source LLMs
+              and did not provide enough information to identify the version of
+              the LLM under evaluation. All studies lacked a sufficient
+              description of LLM characteristics, including temperature, token
+              length, fine-tuning availability, layers, and other details. Most
+              studies (136 [99.3\%]) did not describe a prompt engineering phase
+              in their study. The date of LLM querying was reported in 54
+              (39.4\%) studies. Most studies (89 [65.0\%]) used subjective means
+              to define the successful performance of the chatbot, while less
+              than one-third addressed the ethical, regulatory, and patient
+              safety implications of the clinical integration of LLMs.
+              Conclusions and Relevance: In this systematic review of 137
+              chatbot health advice studies, the reporting quality was
+              heterogeneous and may inform the development of the CHART
+              reporting standards. Ethical, regulatory, and patient safety
+              considerations are crucial as interest grows in the clinical
+              integration of LLMs.",
+  month    =  feb,
+  year     =  2025,
+  language = "en"
 }
 
-% ============================================
-% Sycophancy in LLMs
-% ============================================
-
-@article{bennatan2026sycophant,
-  title={Not Your Typical Sycophant: The Elusive Nature of Sycophancy in Large Language Models},
-  author={Ben Natan, Shahar and Tsur, Oren},
-  journal={arXiv preprint},
-  year={2026},
-  note={arXiv:2401.xxxxx}
+@ARTICLE{Johnson2018-kb,
+  title    = "Use of alternative medicine for cancer and its impact on survival",
+  author   = "Johnson, Skyler B and Park, Henry S and Gross, Cary P and Yu,
+              James B",
+  journal  = "J. Natl. Cancer Inst.",
+  volume   =  110,
+  number   =  1,
+  abstract = "There is limited available information on patterns of utilization
+              and efficacy of alternative medicine (AM) for patients with
+              cancer. We identified 281 patients with nonmetastatic breast,
+              prostate, lung, or colorectal cancer who chose AM, administered as
+              sole anticancer treatment among patients who did not receive
+              conventional cancer treatment (CCT), defined as chemotherapy,
+              radiotherapy, surgery, and/or hormone therapy. Independent
+              covariates on multivariable logistic regression associated with
+              increased likelihood of AM use included breast or lung cancer,
+              higher socioeconomic status, Intermountain West or Pacific
+              location, stage II or III disease, and low comorbidity score.
+              Following 2:1 matching (CCT = 560 patients and AM = 280 patients)
+              on Cox proportional hazards regression, AM use was independently
+              associated with greater risk of death compared with CCT overall
+              (hazard ratio [HR] = 2.50, 95\% confidence interval [CI] = 1.88 to
+              3.27) and in subgroups with breast (HR = 5.68, 95\% CI = 3.22 to
+              10.04), lung (HR = 2.17, 95\% CI = 1.42 to 3.32), and colorectal
+              cancer (HR = 4.57, 95\% CI = 1.66 to 12.61). Although rare, AM
+              utilization for curable cancer without any CCT is associated with
+              greater risk of death.",
+  month    =  jan,
+  year     =  2018,
+  language = "en"
 }
 
-@article{christian2026selfblinding,
-  title={Self-Blinding and Counterfactual Self-Simulation Mitigate Biases and Sycophancy in Large Language Models},
-  author={Christian, Brian and Mazor, Matan},
-  journal={arXiv preprint},
-  year={2026},
-  note={arXiv:2401.xxxxx}
+@ARTICLE{Hu2025-xo,
+  title         = "{MONICA}: Real-time monitoring and Calibration of
+                   chain-of-thought sycophancy in large Reasoning Models",
+  author        = "Hu, Jingyu and Yang, Shu and Gong, Xilin and Wang, Hongming
+                   and Liu, Weiru and Wang, Di",
+  journal       = "arXiv [cs.AI]",
+  abstract      = "Large Reasoning Models (LRMs) suffer from sycophantic
+                   behavior, where models tend to agree with users' incorrect
+                   beliefs and follow misinformation rather than maintain
+                   independent reasoning. This behavior undermines model
+                   reliability and poses societal risks. Mitigating LRM
+                   sycophancy requires monitoring how this sycophancy emerges
+                   during the reasoning trajectory; however, current methods
+                   mainly focus on judging based on final answers and correcting
+                   them, without understanding how sycophancy develops during
+                   reasoning processes. To address this limitation, we propose
+                   MONICA, a novel Monitor-guided Calibration framework that
+                   monitors and mitigates sycophancy during model inference at
+                   the level of reasoning steps, without requiring the model to
+                   finish generating its complete answer. MONICA integrates a
+                   sycophantic monitor that provides real-time monitoring of
+                   sycophantic drift scores during response generation with a
+                   calibrator that dynamically suppresses sycophantic behavior
+                   when scores exceed predefined thresholds. Extensive
+                   experiments across 12 datasets and 3 LRMs demonstrate that
+                   our method effectively reduces sycophantic behavior in both
+                   intermediate reasoning steps and final answers, yielding
+                   robust performance improvements.",
+  month         =  nov,
+  year          =  2025,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.AI"
 }
 
-@article{cheng2026accommodation,
-  title={Accommodation and Epistemic Vigilance: A Pragmatic Account of Why {LLMs} Fail to Challenge Harmful Beliefs},
-  author={Cheng, Myra and Hawkins, Robert D and Jurafsky, Dan},
-  journal={arXiv preprint},
-  year={2026},
-  note={arXiv:2401.xxxxx}
+@ARTICLE{Celebi2025-sx,
+  title         = "{PARROT}: Persuasion and Agreement Robustness Rating of
+                   Output Truth -- A sycophancy robustness benchmark for {LLMs}",
+  author        = "Çelebi, Yusuf and Ezerceli, Özay and Hussieni, Mahmoud El",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "This study presents PARROT (Persuasion and Agreement
+                   Robustness Rating of Output Truth), a robustness focused
+                   framework designed to measure the degradation in accuracy
+                   that occurs under social pressure exerted on users through
+                   authority and persuasion in large language models (LLMs) the
+                   phenomenon of sycophancy (excessive conformity). PARROT (i)
+                   isolates causal effects by comparing the neutral version of
+                   the same question with an authoritatively false version using
+                   a double-blind evaluation, (ii) quantifies confidence shifts
+                   toward the correct and imposed false responses using
+                   log-likelihood-based calibration tracking, and (iii)
+                   systematically classifies failure modes (e.g., robust
+                   correct, sycophantic agreement, reinforced error, stubborn
+                   error, self-correction, etc.) using an eight-state behavioral
+                   taxonomy. We evaluated 22 models using 1,302 MMLU-style
+                   multiple-choice questions across 13 domains and
+                   domain-specific authority templates. Findings show marked
+                   heterogeneity: advanced models (e.g., GPT-5, GPT-4.1, Claude
+                   Sonnet 4.5) exhibit low ``follow rates'' ($\leq 11\%$, GPT-5:
+                   4\%) and minimal accuracy loss, while older/smaller models
+                   show severe epistemic collapse (GPT-4: 80\%, Qwen 2.5-1.5B:
+                   94\%). The danger is not limited to response changes; weak
+                   models reduce confidence in the correct response while
+                   increasing confidence in the imposed incorrect response.
+                   While international law and global knowledge at the domain
+                   level exhibit high fragility, elementary mathematics is
+                   relatively resilient. Consequently, we argue that the goal of
+                   ``resistance to overfitting pressure'' should be addressed as
+                   a primary objective alongside accuracy, harm avoidance, and
+                   privacy for safe deployment in the real world.",
+  month         =  dec,
+  year          =  2025,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL"
 }
 
-@article{celebi2025parrot,
-  title={{PARROT}: Persuasion and Agreement Robustness Rating of Output Truth--A Sycophancy Robustness Benchmark for {LLMs}},
-  author={Çelebi, Yusuf and Ezerceli, Özay and El Hussieni, Mahmoud},
-  journal={arXiv preprint},
-  year={2025},
-  note={arXiv:2411.xxxxx}
+@ARTICLE{Christian2026-li,
+  title         = "Self-blinding and counterfactual self-simulation mitigate
+                   biases and sycophancy in large language models",
+  author        = "Christian, Brian and Mazor, Matan",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "Fair decisions require ignoring irrelevant, potentially
+                   biasing, information. To achieve this, decision-makers need
+                   to approximate what decision they would have made had they
+                   not known certain facts, such as the gender or race of a job
+                   candidate. This counterfactual self-simulation is notoriously
+                   hard for humans, leading to biased judgments even by
+                   well-meaning actors. Here we show that large language models
+                   (LLMs) suffer from similar limitations in their ability to
+                   approximate what decisions they would make under
+                   counterfactual knowledge in offsetting gender and race biases
+                   and overcoming sycophancy. We show that prompting models to
+                   ignore or pretend not to know biasing information fails to
+                   offset these biases and occasionally backfires. However,
+                   unlike humans, LLMs can be given access to a ground-truth
+                   model of their own counterfactual cognition -- their own API.
+                   We show that this access to the responses of a blinded
+                   replica enables fairer decisions, while providing greater
+                   transparency to distinguish implicit from intentionally
+                   biased behavior.",
+  month         =  jan,
+  year          =  2026,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL"
 }
 
-@article{hu2025monica,
-  title={{MONICA}: Real-Time Monitoring and Calibration of Chain-of-Thought Sycophancy in Large Reasoning Models},
-  author={Hu, Jingyu and Yang, Shu and Gong, Xilin and others},
-  journal={arXiv preprint},
-  year={2025},
-  note={arXiv:2411.xxxxx}
+@ARTICLE{Laymouna2024-uf,
+  title     = "Roles, users, benefits, and limitations of chatbots in health
+               care: Rapid review",
+  author    = "Laymouna, Moustafa and Ma, Yuanchao and Lessard, David and
+               Schuster, Tibor and Engler, Kim and Lebouché, Bertrand",
+  journal   = "J. Med. Internet Res.",
+  publisher = "JMIR Publications Inc.",
+  volume    =  26,
+  pages     = "e56930",
+  abstract  = "BACKGROUND: Chatbots, or conversational agents, have emerged as
+               significant tools in health care, driven by advancements in
+               artificial intelligence and digital technology. These programs
+               are designed to simulate human conversations, addressing various
+               health care needs. However, no comprehensive synthesis of health
+               care chatbots' roles, users, benefits, and limitations is
+               available to inform future research and application in the field.
+               OBJECTIVE: This review aims to describe health care chatbots'
+               characteristics, focusing on their diverse roles in the health
+               care pathway, user groups, benefits, and limitations. METHODS: A
+               rapid review of published literature from 2017 to 2023 was
+               performed with a search strategy developed in collaboration with
+               a health sciences librarian and implemented in the MEDLINE and
+               Embase databases. Primary research studies reporting on chatbot
+               roles or benefits in health care were included. Two reviewers
+               dual-screened the search results. Extracted data on chatbot
+               roles, users, benefits, and limitations were subjected to content
+               analysis. RESULTS: The review categorized chatbot roles into 2
+               themes: delivery of remote health services, including patient
+               support, care management, education, skills building, and health
+               behavior promotion, and provision of administrative assistance to
+               health care providers. User groups spanned across patients with
+               chronic conditions as well as patients with cancer; individuals
+               focused on lifestyle improvements; and various demographic groups
+               such as women, families, and older adults. Professionals and
+               students in health care also emerged as significant users,
+               alongside groups seeking mental health support, behavioral
+               change, and educational enhancement. The benefits of health care
+               chatbots were also classified into 2 themes: improvement of
+               health care quality and efficiency and cost-effectiveness in
+               health care delivery. The identified limitations encompassed
+               ethical challenges, medicolegal and safety concerns, technical
+               difficulties, user experience issues, and societal and economic
+               impacts. CONCLUSIONS: Health care chatbots offer a wide spectrum
+               of applications, potentially impacting various aspects of health
+               care. While they are promising tools for improving health care
+               efficiency and quality, their integration into the health care
+               system must be approached with consideration of their limitations
+               to ensure optimal, safe, and equitable use.",
+  month     =  jul,
+  year      =  2024,
+  keywords  = "AI; artificial intelligence; chatbot; conversational agent;
+               conversational assistant; digital health; electronic health;
+               health information technology; mobile health; telehealth;
+               user-computer interface",
+  language  = "en"
 }
 
-@article{rahman2025pendulum,
-  title={{PENDULUM}: A Benchmark for Assessing Sycophancy in Multimodal Large Language Models},
-  author={Rahman, A B M Ashikur and Anwar, Saeed and Usman, Muhammad and Ahmad, Irfan and Mian, Ajmal},
-  journal={arXiv preprint},
-  year={2025},
-  note={arXiv:2412.xxxxx}
+@ARTICLE{Zakka2024-bw,
+  title     = "Almanac - retrieval-augmented language models for clinical
+               medicine",
+  author    = "Zakka, Cyril and Shad, Rohan and Chaurasia, Akash and Dalal, Alex
+               R and Kim, Jennifer L and Moor, Michael and Fong, Robyn and
+               Phillips, Curran and Alexander, Kevin and Ashley, Euan and Boyd,
+               Jack and Boyd, Kathleen and Hirsch, Karen and Langlotz, Curt and
+               Lee, Rita and Melia, Joanna and Nelson, Joanna and Sallam, Karim
+               and Tullis, Stacey and Vogelsong, Melissa Ann and Cunningham,
+               John Patrick and Hiesinger, William",
+  journal   = "NEJM AI",
+  publisher = "Massachusetts Medical Society",
+  volume    =  1,
+  number    =  2,
+  abstract  = "BACKGROUND: Large language models (LLMs) have recently shown
+               impressive zero-shot capabilities, whereby they can use auxiliary
+               data, without the availability of task-specific training
+               examples, to complete a variety of natural language tasks, such
+               as summarization, dialogue generation, and question answering.
+               However, despite many promising applications of LLMs in clinical
+               medicine, adoption of these models has been limited by their
+               tendency to generate incorrect and sometimes even harmful
+               statements. METHODS: We tasked a panel of eight board-certified
+               clinicians and two health care practitioners with evaluating
+               Almanac, an LLM framework augmented with retrieval capabilities
+               from curated medical resources for medical guideline and
+               treatment recommendations. The panel compared responses from
+               Almanac and standard LLMs (ChatGPT-4, Bing, and Bard) versus a
+               novel data set of 314 clinical questions spanning nine medical
+               specialties. RESULTS: Almanac showed a significant improvement in
+               performance compared with the standard LLMs across axes of
+               factuality, completeness, user preference, and adversarial
+               safety. CONCLUSIONS: Our results show the potential for LLMs with
+               access to domain-specific corpora to be effective in clinical
+               decision-making. The findings also underscore the importance of
+               carefully testing LLMs before deployment to mitigate their
+               shortcomings. (Funded by the National Institutes of Health,
+               National Heart, Lung, and Blood Institute.).",
+  month     =  feb,
+  year      =  2024,
+  language  = "en"
 }
 
-@article{zhang2025humanlike,
-  title={Human-like Social Compliance in Large Language Models: Unifying Sycophancy and Conformity through Signal Competition Dynamics},
-  author={Zhang, Long and Chen, Wei-neng},
-  journal={arXiv preprint},
-  year={2025},
-  note={arXiv:2412.xxxxx}
+@ARTICLE{Singhal2023-gc,
+  title     = "Large language models encode clinical knowledge",
+  author    = "Singhal, Karan and Azizi, Shekoofeh and Tu, Tao and Mahdavi, S
+               Sara and Wei, Jason and Chung, Hyung Won and Scales, Nathan and
+               Tanwani, Ajay and Cole-Lewis, Heather and Pfohl, Stephen and
+               Payne, Perry and Seneviratne, Martin and Gamble, Paul and Kelly,
+               Chris and Babiker, Abubakr and Schärli, Nathanael and Chowdhery,
+               Aakanksha and Mansfield, Philip and Demner-Fushman, Dina and
+               Agüera Y Arcas, Blaise and Webster, Dale and Corrado, Greg S and
+               Matias, Yossi and Chou, Katherine and Gottweis, Juraj and
+               Tomasev, Nenad and Liu, Yun and Rajkomar, Alvin and Barral,
+               Joelle and Semturs, Christopher and Karthikesalingam, Alan and
+               Natarajan, Vivek",
+  journal   = "Nature",
+  publisher = "Springer Science and Business Media LLC",
+  volume    =  620,
+  number    =  7972,
+  pages     = "172--180",
+  abstract  = "Large language models (LLMs) have demonstrated impressive
+               capabilities, but the bar for clinical applications is high.
+               Attempts to assess the clinical knowledge of models typically
+               rely on automated evaluations based on limited benchmarks. Here,
+               to address these limitations, we present MultiMedQA, a benchmark
+               combining six existing medical question answering datasets
+               spanning professional medicine, research and consumer queries and
+               a new dataset of medical questions searched online,
+               HealthSearchQA. We propose a human evaluation framework for model
+               answers along multiple axes including factuality, comprehension,
+               reasoning, possible harm and bias. In addition, we evaluate
+               Pathways Language Model1 (PaLM, a 540-billion parameter LLM) and
+               its instruction-tuned variant, Flan-PaLM2 on MultiMedQA. Using a
+               combination of prompting strategies, Flan-PaLM achieves
+               state-of-the-art accuracy on every MultiMedQA multiple-choice
+               dataset (MedQA3, MedMCQA4, PubMedQA5 and Measuring Massive
+               Multitask Language Understanding (MMLU) clinical topics6),
+               including 67.6\% accuracy on MedQA (US Medical Licensing
+               Exam-style questions), surpassing the prior state of the art by
+               more than 17\%. However, human evaluation reveals key gaps. To
+               resolve this, we introduce instruction prompt tuning, a
+               parameter-efficient approach for aligning LLMs to new domains
+               using a few exemplars. The resulting model, Med-PaLM, performs
+               encouragingly, but remains inferior to clinicians. We show that
+               comprehension, knowledge recall and reasoning improve with model
+               scale and instruction prompt tuning, suggesting the potential
+               utility of LLMs in medicine. Our human evaluations reveal
+               limitations of today's models, reinforcing the importance of both
+               evaluation frameworks and method development in creating safe,
+               helpful LLMs for clinical applications.",
+  month     =  aug,
+  year      =  2023,
+  language  = "en"
 }
 
-@article{chang2026internal,
-  title={Internal Reasoning vs. External Control: A Thermodynamic Analysis of Sycophancy in Large Language Models},
-  author={Chang, Edward Y},
-  journal={arXiv preprint},
-  year={2026},
-  note={arXiv:2401.xxxxx}
+@ARTICLE{Kouzy2025-jc,
+  title     = "Review of large language models for patient and caregiver support
+               in cancer care delivery",
+  author    = "Kouzy, Ramez and Cha, Elaine E and Rosen, Allison and Bitterman,
+               Danielle S",
+  journal   = "JCO Clin. Cancer Inform.",
+  publisher = "American Society of Clinical Oncology (ASCO)",
+  volume    =  9,
+  number    =  9,
+  pages     = "e2500044",
+  abstract  = "This narrative review examines the current landscape and evidence
+               regarding large language model (LLM) applications designed to
+               support patients with cancer and caregivers. We analyzed
+               peer-reviewed literature, conference proceedings, and
+               implementation studies exploring LLM use in oncology patient
+               support. Applications cluster in four primary domains: education
+               and information delivery, symptom checking and triage, telehealth
+               integration, and clinical trial participation. Studies
+               demonstrate promising accuracy for basic cancer information
+               delivery, although performance varies for complex clinical
+               scenarios. Early research shows preclinical feasibility and
+               acceptability of LLM-enhanced tools for patients, but
+               effectiveness data remain limited. Implementation barriers
+               include scalable monitoring, equitable access, maintaining
+               privacy standards, and validating accuracy across diverse
+               populations. We also examine potential future applications across
+               the cancer care continuum, from prevention through end-of-life
+               care, and propose strategies for development and implementation.
+               Additionally, we present a framework to guide physician-patient
+               discussions regarding LLM use in oncology, addressing privacy
+               concerns, setting appropriate expectations, and ensuring safe
+               integration into care delivery. Future research should use robust
+               evaluation frameworks focused on safety and patient-centered
+               outcomes while carefully considering health equity implications.
+               As these technologies evolve, maintaining focus on evidence-based
+               validation will be crucial for realizing their potential to
+               enhance cancer care delivery, engagement, and patient
+               satisfaction.",
+  month     =  nov,
+  year      =  2025,
+  language  = "en"
 }
 
-% ============================================
-% Bitterman Lab - Oncology AI Safety
-% ============================================
-
-@article{gallifant2025tripod,
-  title={The {TRIPOD-LLM} reporting guideline for studies using large language models},
-  author={Gallifant, Jack and Afshar, Majid and Ameen, Salih and Aphinyanaphongs, Yin and others and Bitterman, Danielle S},
-  journal={Nature Medicine},
-  volume={31},
-  number={1},
-  pages={60--69},
-  year={2025},
-  doi={10.1038/s41591-024-03425-5},
-  pmid={39779929}
+@ARTICLE{Zhu2025-km,
+  title         = "Cancer-Myth: Evaluating large language models on patient
+                   questions with false presuppositions",
+  author        = "Zhu, Wang Bill and Chen, Tianqi and Yu, Xinyan Velocity and
+                   Lin, Ching Ying and Law, Jade and Jizzini, Mazen and Nieva,
+                   Jorge J and Liu, Ruishan and Jia, Robin",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "Cancer patients are increasingly turning to large language
+                   models (LLMs) for medical information, making it critical to
+                   assess how well these models handle complex, personalized
+                   questions. However, current medical benchmarks focus on
+                   medical exams or consumer-searched questions and do not
+                   evaluate LLMs on real patient questions with patient details.
+                   In this paper, we first have three hematology-oncology
+                   physicians evaluate cancer-related questions drawn from real
+                   patients. While LLM responses are generally accurate, the
+                   models frequently fail to recognize or address false
+                   presuppositions in the questions, posing risks to safe
+                   medical decision-making. To study this limitation
+                   systematically, we introduce Cancer-Myth, an expert-verified
+                   adversarial dataset of 585 cancer-related questions with
+                   false presuppositions. On this benchmark, no frontier LLM --
+                   including GPT-5, Gemini-2.5-Pro, and Claude-4-Sonnet --
+                   corrects these false presuppositions more than $43\%$ of the
+                   time. To study mitigation strategies, we further construct a
+                   150-question Cancer-Myth-NFP set, in which physicians confirm
+                   the absence of false presuppositions. We find typical
+                   mitigation strategies, such as adding precautionary prompts
+                   with GEPA optimization, can raise accuracy on Cancer-Myth to
+                   $80\%$, but at the cost of misidentifying presuppositions in
+                   $41\%$ of Cancer-Myth-NFP questions and causing a $10\%$
+                   relative performance drop on other medical benchmarks. These
+                   findings highlight a critical gap in the reliability of LLMs,
+                   show that prompting alone is not a reliable remedy for false
+                   presuppositions, and underscore the need for more robust
+                   safeguards in medical AI systems.",
+  month         =  oct,
+  year          =  2025,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL"
 }
 
-@article{chen2024effect,
-  title={The effect of using a large language model to respond to patient messages},
-  author={Chen, Shan and Guevara, Marco and Moningi, Srinivas and others and Bitterman, Danielle S},
-  journal={The Lancet Digital Health},
-  volume={6},
-  number={6},
-  pages={e379--e381},
-  year={2024},
-  doi={10.1016/S2589-7500(24)00060-8},
-  pmid={38664108}
+@ARTICLE{Vedadi2025-om,
+  title         = "Towards physician-centered oversight of conversational
+                   diagnostic {AI}",
+  author        = "Vedadi, Elahe and Barrett, David and Harris, Natalie and
+                   Wulczyn, Ellery and Reddy, Shashir and Ruparel, Roma and
+                   Schaekermann, Mike and Strother, Tim and Tanno, Ryutaro and
+                   Sharma, Yash and Lee, Jihyeon and Hughes, Cían and Slack,
+                   Dylan and Palepu, Anil and Freyberg, Jan and Saab, Khaled and
+                   Liévin, Valentin and Weng, Wei-Hung and Tu, Tao and Liu, Yun
+                   and Tomasev, Nenad and Kulkarni, Kavita and Mahdavi, S Sara
+                   and Guu, Kelvin and Barral, Joëlle and Webster, Dale R and
+                   Manyika, James and Hassidim, Avinatan and Chou, Katherine and
+                   Matias, Yossi and Kohli, Pushmeet and Rodman, Adam and
+                   Natarajan, Vivek and Karthikesalingam, Alan and Stutz, David",
+  journal       = "arXiv [cs.AI]",
+  abstract      = "Recent work has demonstrated the promise of conversational AI
+                   systems for diagnostic dialogue. However, real-world
+                   assurance of patient safety means that providing individual
+                   diagnoses and treatment plans is considered a regulated
+                   activity by licensed professionals. Furthermore, physicians
+                   commonly oversee other team members in such activities,
+                   including nurse practitioners (NPs) or physician
+                   assistants/associates (PAs). Inspired by this, we propose a
+                   framework for effective, asynchronous oversight of the
+                   Articulate Medical Intelligence Explorer (AMIE) AI system. We
+                   propose guardrailed-AMIE (g-AMIE), a multi-agent system that
+                   performs history taking within guardrails, abstaining from
+                   individualized medical advice. Afterwards, g-AMIE conveys
+                   assessments to an overseeing primary care physician (PCP) in
+                   a clinician cockpit interface. The PCP provides oversight and
+                   retains accountability of the clinical decision. This
+                   effectively decouples oversight from intake and can thus
+                   happen asynchronously. In a randomized, blinded virtual
+                   Objective Structured Clinical Examination (OSCE) of text
+                   consultations with asynchronous oversight, we compared g-AMIE
+                   to NPs/PAs or a group of PCPs under the same guardrails.
+                   Across 60 scenarios, g-AMIE outperformed both groups in
+                   performing high-quality intake, summarizing cases, and
+                   proposing diagnoses and management plans for the overseeing
+                   PCP to review. This resulted in higher quality composite
+                   decisions. PCP oversight of g-AMIE was also more
+                   time-efficient than standalone PCP consultations in prior
+                   work. While our study does not replicate existing clinical
+                   practices and likely underestimates clinicians' capabilities,
+                   our results demonstrate the promise of asynchronous oversight
+                   as a feasible paradigm for diagnostic AI systems to operate
+                   under expert human oversight for enhancing real-world care.",
+  month         =  jul,
+  year          =  2025,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.AI"
 }
 
-@article{chen2025large,
-  title={Large language models in oncology: a review},
-  author={Chen, David and Parsa, Reza and Swanson, Kira and Nunez, Justin J and Critch, Andrew and Bitterman, Danielle S and Liu, Fei-Fei and Raman, Srinivas},
-  journal={BMJ Oncology},
-  volume={4},
-  number={1},
-  pages={e000759},
-  year={2025},
-  doi={10.1136/bmjonc-2025-000759},
-  pmid={40519217}
+@ARTICLE{Chang2025-jn,
+  title     = "Red teaming {ChatGPT} in medicine to yield real-world insights on
+               model behavior",
+  author    = "Chang, Crystal T and Farah, Hodan and Gui, Haiwen and Rezaei,
+               Shawheen Justin and Bou-Khalil, Charbel and Park, Ye-Jean and
+               Swaminathan, Akshay and Omiye, Jesutofunmi A and Kolluri, Akaash
+               and Chaurasia, Akash and Lozano, Alejandro and Heiman, Alice and
+               Jia, Allison Sihan and Kaushal, Amit and Jia, Angela and
+               Iacovelli, Angelica and Yang, Archer and Salles, Arghavan and
+               Singhal, Arpita and Narasimhan, Balasubramanian and Belai,
+               Benjamin and Jacobson, Benjamin H and Li, Binglan and Poe,
+               Celeste H and Sanghera, Chandan and Zheng, Chenming and Messer,
+               Conor and Kettud, Damien Varid and Pandya, Deven and Kaur,
+               Dhamanpreet and Hla, Diana and Dindoust, Diba and Moehrle,
+               Dominik and Ross, Duncan and Chou, Ellaine and Lin, Eric and
+               Haredasht, Fateme Nateghi and Cheng, Ge and Gao, Irena and Chang,
+               Jacob and Silberg, Jake and Fries, Jason A and Xu, Jiapeng and
+               Jamison, Joe and Tamaresis, John S and Chen, Jonathan H and
+               Lazaro, Joshua and Banda, Juan M and Lee, Julie J and Matthys,
+               Karen Ebert and Steffner, Kirsten R and Tian, Lu and Pegolotti,
+               Luca and Srinivasan, Malathi and Manimaran, Maniragav and
+               Schwede, Matthew and Zhang, Minghe and Nguyen, Minh and
+               Fathzadeh, Mohsen and Zhao, Qian and Bajra, Rika and Khurana,
+               Rohit and Azam, Ruhana and Bartlett, Rush and Truong, Sang T and
+               Fleming, Scott L and Raj, Shriti and Behr, Solveig and Onyeka,
+               Sonia and Muppidi, Sri and Bandali, Tarek and Eulalio, Tiffany Y
+               and Chen, Wenyuan and Zhou, Xuanyu and Ding, Yanan and Cui, Ying
+               and Tan, Yuqi and Liu, Yutong and Shah, Nigam and Daneshjou,
+               Roxana",
+  journal   = "NPJ Digit. Med.",
+  publisher = "Springer Science and Business Media LLC",
+  volume    =  8,
+  number    =  1,
+  pages     =  149,
+  abstract  = "Red teaming, the practice of adversarially exposing unexpected or
+               undesired model behaviors, is critical towards improving equity
+               and accuracy of large language models, but non-model
+               creator-affiliated red teaming is scant in healthcare. We
+               convened teams of clinicians, medical and engineering students,
+               and technical professionals (80 participants total) to
+               stress-test models with real-world clinical cases and categorize
+               inappropriate responses along axes of safety, privacy,
+               hallucinations/accuracy, and bias. Six medically-trained
+               reviewers re-analyzed prompt-response pairs and added qualitative
+               annotations. Of 376 unique prompts (1504 responses), 20.1\% were
+               inappropriate (GPT-3.5: 25.8\%; GPT-4.0: 16\%; GPT-4.0 with
+               Internet: 17.8\%). Subsequently, we show the utility of our
+               benchmark by testing GPT-4o, a model released after our event
+               (20.4\% inappropriate). 21.5\% of responses appropriate with
+               GPT-3.5 were inappropriate in updated models. We share insights
+               for constructing red teaming prompts, and present our benchmark
+               for iterative model assessments.",
+  month     =  mar,
+  year      =  2025,
+  language  = "en"
 }
 
-@article{guevara2024large,
-  title={Large language models to identify social determinants of health in electronic health records},
-  author={Guevara, Marco and Chen, Shan and Thomas, Spencer and others and Bitterman, Danielle S},
-  journal={NPJ Digital Medicine},
-  volume={7},
-  number={1},
-  pages={6},
-  year={2024},
-  doi={10.1038/s41746-023-00970-0},
-  pmid={38200151}
+@ARTICLE{Baker2025-vw,
+  title         = "Monitoring reasoning models for misbehavior and the risks of
+                   promoting obfuscation",
+  author        = "Baker, Bowen and Huizinga, Joost and Gao, Leo and Dou, Zehao
+                   and Guan, Melody Y and Madry, Aleksander and Zaremba,
+                   Wojciech and Pachocki, Jakub and Farhi, David",
+  journal       = "arXiv [cs.AI]",
+  abstract      = "Mitigating reward hacking--where AI systems misbehave due to
+                   flaws or misspecifications in their learning
+                   objectives--remains a key challenge in constructing capable
+                   and aligned models. We show that we can monitor a frontier
+                   reasoning model, such as OpenAI o3-mini, for reward hacking
+                   in agentic coding environments by using another LLM that
+                   observes the model's chain-of-thought (CoT) reasoning. CoT
+                   monitoring can be far more effective than monitoring agent
+                   actions and outputs alone, and we further found that a LLM
+                   weaker than o3-mini, namely GPT-4o, can effectively monitor a
+                   stronger model. Because CoT monitors can be effective at
+                   detecting exploits, it is natural to ask whether those
+                   exploits can be suppressed by incorporating a CoT monitor
+                   directly into the agent's training objective. While we show
+                   that integrating CoT monitors into the reinforcement learning
+                   reward can indeed produce more capable and more aligned
+                   agents in the low optimization regime, we find that with too
+                   much optimization, agents learn obfuscated reward hacking,
+                   hiding their intent within the CoT while still exhibiting a
+                   significant rate of reward hacking. Because it is difficult
+                   to tell when CoTs have become obfuscated, it may be necessary
+                   to pay a monitorability tax by not applying strong
+                   optimization pressures directly to the chain-of-thought,
+                   ensuring that CoTs remain monitorable and useful for
+                   detecting misaligned behavior.",
+  month         =  mar,
+  year          =  2025,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.AI"
 }
 
-@article{moreno2024toward,
-  title={Toward Clinical-Grade Evaluation of Large Language Models},
-  author={Moreno, Alayna C and Bitterman, Danielle S},
-  journal={International Journal of Radiation Oncology, Biology, Physics},
-  volume={118},
-  number={4},
-  pages={916--920},
-  year={2024},
-  doi={10.1016/j.ijrobp.2023.11.012},
-  pmid={38401979}
+@ARTICLE{Fanous2025-pr,
+  title         = "{SycEval}: Evaluating {LLM} Sycophancy",
+  author        = "Fanous, Aaron and Goldberg, Jacob and Agarwal, Ank A and Lin,
+                   Joanna and Zhou, Anson and Daneshjou, Roxana and Koyejo,
+                   Sanmi",
+  journal       = "arXiv [cs.AI]",
+  abstract      = "Large language models (LLMs) are increasingly applied in
+                   educational, clinical, and professional settings, but their
+                   tendency for sycophancy -- prioritizing user agreement over
+                   independent reasoning -- poses risks to reliability. This
+                   study introduces a framework to evaluate sycophantic behavior
+                   in ChatGPT-4o, Claude-Sonnet, and Gemini-1.5-Pro across AMPS
+                   (mathematics) and MedQuad (medical advice) datasets.
+                   Sycophantic behavior was observed in 58.19\% of cases, with
+                   Gemini exhibiting the highest rate (62.47\%) and ChatGPT the
+                   lowest (56.71\%). Progressive sycophancy, leading to correct
+                   answers, occurred in 43.52\% of cases, while regressive
+                   sycophancy, leading to incorrect answers, was observed in
+                   14.66\%. Preemptive rebuttals demonstrated significantly
+                   higher sycophancy rates than in-context rebuttals (61.75\%
+                   vs. 56.52\%, $Z=5.87$, $p<0.001$), particularly in
+                   computational tasks, where regressive sycophancy increased
+                   significantly (preemptive: 8.13\%, in-context: 3.54\%,
+                   $p<0.001$). Simple rebuttals maximized progressive sycophancy
+                   ($Z=6.59$, $p<0.001$), while citation-based rebuttals
+                   exhibited the highest regressive rates ($Z=6.59$, $p<0.001$).
+                   Sycophantic behavior showed high persistence (78.5\%, 95\%
+                   CI: [77.2\%, 79.8\%]) regardless of context or model. These
+                   findings emphasize the risks and opportunities of deploying
+                   LLMs in structured and dynamic domains, offering insights
+                   into prompt programming and model optimization for safer AI
+                   applications.",
+  month         =  sep,
+  year          =  2025,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.AI"
 }
 
-@article{kouzy2025oneshot,
-  title={One shot at trust: building credible evidence for medical artificial intelligence},
-  author={Kouzy, Ramez and others},
-  journal={The Lancet Digital Health},
-  volume={7},
-  number={7},
-  pages={100883},
-  year={2025},
-  doi={10.1016/j.landig.2025.100883},
-  pmid={40752990}
+@ARTICLE{Malmqvist2024-wk,
+  title         = "Sycophancy in Large Language Models: Causes and Mitigations",
+  author        = "Malmqvist, Lars",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "Large language models (LLMs) have demonstrated remarkable
+                   capabilities across a wide range of natural language
+                   processing tasks. However, their tendency to exhibit
+                   sycophantic behavior - excessively agreeing with or
+                   flattering users - poses significant risks to their
+                   reliability and ethical deployment. This paper provides a
+                   technical survey of sycophancy in LLMs, analyzing its causes,
+                   impacts, and potential mitigation strategies. We review
+                   recent work on measuring and quantifying sycophantic
+                   tendencies, examine the relationship between sycophancy and
+                   other challenges like hallucination and bias, and evaluate
+                   promising techniques for reducing sycophancy while
+                   maintaining model performance. Key approaches explored
+                   include improved training data, novel fine-tuning methods,
+                   post-deployment control mechanisms, and decoding strategies.
+                   We also discuss the broader implications of sycophancy for AI
+                   alignment and propose directions for future research. Our
+                   analysis suggests that mitigating sycophancy is crucial for
+                   developing more robust, reliable, and ethically-aligned
+                   language models.",
+  month         =  nov,
+  year          =  2024,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  language      = "en"
 }
 
-@article{gallifant2025reliability,
-  title={Reliability of Large Language Model Knowledge Across Brand and Generic Cancer Drug Names},
-  author={Gallifant, Jack and Chen, Shan and Jain, Sanjay K and others and Bitterman, Danielle S},
-  journal={JCO Clinical Cancer Informatics},
-  volume={9},
-  pages={e2400257},
-  year={2025},
-  doi={10.1200/CCI-24-00257},
-  pmid={40523223}
+@ARTICLE{Collins2024-pf,
+  title     = "Building machines that learn and think with people",
+  author    = "Collins, Katherine M and Sucholutsky, Ilia and Bhatt, Umang and
+               Chandra, Kartik and Wong, Lionel and Lee, Mina and Zhang, Cedegao
+               E and Zhi-Xuan, Tan and Ho, Mark and Mansinghka, Vikash and
+               Weller, Adrian and Tenenbaum, Joshua B and Griffiths, Thomas L",
+  journal   = "Nat. Hum. Behav.",
+  publisher = "Springer US",
+  volume    =  8,
+  number    =  10,
+  pages     = "1851--1863",
+  abstract  = "What do we want from machine intelligence? We envision machines
+               that are not just tools for thought but partners in thought:
+               reasonable, insightful, knowledgeable, reliable and trustworthy
+               systems that think with us. Current artificial intelligence
+               systems satisfy some of these criteria, some of the time. In this
+               Perspective, we show how the science of collaborative cognition
+               can be put to work to engineer systems that really can be called
+               'thought partners', systems built to meet our expectations and
+               complement our limitations. We lay out several modes of
+               collaborative thought in which humans and artificial intelligence
+               thought partners can engage, and we propose desiderata for
+               human-compatible thought partnerships. Drawing on motifs from
+               computational cognitive science, we motivate an alternative
+               scaling path for the design of thought partners and ecosystems
+               around their use through a Bayesian lens, whereby the partners we
+               construct actively build and reason over models of the human and
+               world.",
+  month     =  oct,
+  year      =  2024,
+  language  = "en"
 }
 
-% ============================================
-% Medical Education and Multi-Turn Conversations
-% ============================================
-
-@article{yamamoto2024enhancing,
-  title={Enhancing Medical Interview Skills Through {AI}-Simulated Patient Interactions: Nonrandomized Controlled Trial},
-  author={Yamamoto, Akihiro and Koda, Masayuki and Ogawa, Hitoshi and Miyoshi, Tomoko and Maeda, Yoshito and Otsuka, Fumio and Ino, Hidekazu},
-  journal={JMIR Medical Education},
-  volume={10},
-  pages={e58753},
-  year={2024},
-  doi={10.2196/58753},
-  pmid={39312284}
+@ARTICLE{Zhi-Xuan2024-ie,
+  title         = "Pragmatic instruction following and goal assistance via
+                   cooperative language-guided inverse planning",
+  author        = "Zhi-Xuan, Tan and Ying, Lance and Mansinghka, Vikash and
+                   Tenenbaum, Joshua B",
+  journal       = "arXiv [cs.AI]",
+  abstract      = "People often give instructions whose meaning is ambiguous
+                   without further context, expecting that their actions or
+                   goals will disambiguate their intentions. How can we build
+                   assistive agents that follow such instructions in a flexible,
+                   context-sensitive manner? This paper introduces cooperative
+                   language-guided inverse plan search (CLIPS), a Bayesian agent
+                   architecture for pragmatic instruction following and goal
+                   assistance. Our agent assists a human by modeling them as a
+                   cooperative planner who communicates joint plans to the
+                   assistant, then performs multimodal Bayesian inference over
+                   the human's goal from actions and language, using large
+                   language models (LLMs) to evaluate the likelihood of an
+                   instruction given a hypothesized plan. Given this posterior,
+                   our assistant acts to minimize expected goal achievement
+                   cost, enabling it to pragmatically follow ambiguous
+                   instructions and provide effective assistance even when
+                   uncertain about the goal. We evaluate these capabilities in
+                   two cooperative planning domains (Doors, Keys \& Gems and
+                   VirtualHome), finding that CLIPS significantly outperforms
+                   GPT-4V, LLM-based literal instruction following and unimodal
+                   inverse planning in both accuracy and helpfulness, while
+                   closely matching the inferences and assistive judgments
+                   provided by human raters.",
+  month         =  feb,
+  year          =  2024,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.AI"
 }
 
-@article{yu2025simulated,
-  title={Simulated patient systems powered by large language model-based {AI} agents offer potential for transforming medical education},
-  author={Yu, Haowen and Zhou, Jie and Li, Long and others and Bitterman, Danielle S and others},
-  journal={Communications Medicine},
-  volume={6},
-  number={1},
-  pages={27},
-  year={2025},
-  doi={10.1038/s43856-025-01283-x},
-  pmid={41420084}
+@ARTICLE{Kaur2023-am,
+  title         = "Evaluating large language models for health-related queries
+                   with presuppositions",
+  author        = "Kaur, Navreet and Choudhury, Monojit and Pruthi, Danish",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "As corporations rush to integrate large language models
+                   (LLMs) to their search offerings, it is critical that they
+                   provide factually accurate information that is robust to any
+                   presuppositions that a user may express. In this work, we
+                   introduce UPHILL, a dataset consisting of health-related
+                   queries with varying degrees of presuppositions. Using
+                   UPHILL, we evaluate the factual accuracy and consistency of
+                   InstructGPT, ChatGPT, and BingChat models. We find that while
+                   model responses rarely disagree with true health claims
+                   (posed as questions), they often fail to challenge false
+                   claims: responses from InstructGPT agree with 32\% of the
+                   false claims, ChatGPT 26\% and BingChat 23\%. As we increase
+                   the extent of presupposition in input queries, the responses
+                   from InstructGPT and ChatGPT agree with the claim
+                   considerably more often, regardless of its veracity.
+                   Responses from BingChat, which rely on retrieved webpages,
+                   are not as susceptible. Given the moderate factual accuracy,
+                   and the inability of models to consistently correct false
+                   assumptions, our work calls for a careful assessment of
+                   current LLMs for use in high-stakes scenarios.",
+  month         =  dec,
+  year          =  2023,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL"
 }
 
-% ============================================
-% Additional Supporting References
-% ============================================
-
-@article{peterson2022timing,
-  title={Timing and Motivations for Alternative Cancer Therapy With Insights From a Crowdfunding Platform: Cross-sectional Mixed Methods Study},
-  author={Peterson, Jessica and Wilson, Thomas and Gruhl, Julie and others},
-  journal={JMIR Cancer},
-  volume={8},
-  number={2},
-  pages={e34183},
-  year={2022},
-  doi={10.2196/34183},
-  pmid={35671074}
+@ARTICLE{Wong2025-lo,
+  title         = "Retrieval-augmented systems can be dangerous medical
+                   communicators",
+  author        = "Wong, Lionel and Ali, Ayman and Xiong, Raymond and Shen,
+                   Shannon Zeijang and Kim, Yoon and Agrawal, Monica",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "Patients have long sought health information online, and
+                   increasingly, they are turning to generative AI to answer
+                   their health-related queries. Given the high stakes of the
+                   medical domain, techniques like retrieval-augmented
+                   generation and citation grounding have been widely promoted
+                   as methods to reduce hallucinations and improve the accuracy
+                   of AI-generated responses and have been widely adopted into
+                   search engines. This paper argues that even when these
+                   methods produce literally accurate content drawn from source
+                   documents sans hallucinations, they can still be highly
+                   misleading. Patients may derive significantly different
+                   interpretations from AI-generated outputs than they would
+                   from reading the original source material, let alone
+                   consulting a knowledgeable clinician. Through a large-scale
+                   query analysis on topics including disputed diagnoses and
+                   procedure safety, we support our argument with quantitative
+                   and qualitative evidence of the suboptimal answers resulting
+                   from current systems. In particular, we highlight how these
+                   models tend to decontextualize facts, omit critical relevant
+                   sources, and reinforce patient misconceptions or biases. We
+                   propose a series of recommendations -- such as the
+                   incorporation of communication pragmatics and enhanced
+                   comprehension of source documents -- that could help mitigate
+                   these issues and extend beyond the medical domain.",
+  month         =  feb,
+  year          =  2025,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL"
 }
 
-@article{bai2025application,
-  title={Application of {AI} Chatbot in Responding to Asynchronous Text-Based Messages From Patients With Cancer: Comparative Study},
-  author={Bai, Xiaoke and Wang, Shanshan and Zhao, Yan and others},
-  journal={Journal of Medical Internet Research},
-  volume={27},
-  pages={e67462},
-  year={2025},
-  doi={10.2196/67462},
-  pmid={40397947}
+@ARTICLE{Sharma2023-vx,
+  title         = "Towards understanding sycophancy in language models",
+  author        = "Sharma, Mrinank and Tong, Meg and Korbak, Tomasz and
+                   Duvenaud, David and Askell, Amanda and Bowman, Samuel R and
+                   Cheng, Newton and Durmus, Esin and Hatfield-Dodds, Zac and
+                   Johnston, Scott R and Kravec, Shauna and Maxwell, Timothy and
+                   McCandlish, Sam and Ndousse, Kamal and Rausch, Oliver and
+                   Schiefer, Nicholas and Yan, Da and Zhang, Miranda and Perez,
+                   Ethan",
+  journal       = "arXiv [cs.CL]",
+  abstract      = "Human feedback is commonly utilized to finetune AI
+                   assistants. But human feedback may also encourage model
+                   responses that match user beliefs over truthful ones, a
+                   behaviour known as sycophancy. We investigate the prevalence
+                   of sycophancy in models whose finetuning procedure made use
+                   of human feedback, and the potential role of human preference
+                   judgments in such behavior. We first demonstrate that five
+                   state-of-the-art AI assistants consistently exhibit
+                   sycophancy across four varied free-form text-generation
+                   tasks. To understand if human preferences drive this broadly
+                   observed behavior, we analyze existing human preference data.
+                   We find that when a response matches a user's views, it is
+                   more likely to be preferred. Moreover, both humans and
+                   preference models (PMs) prefer convincingly-written
+                   sycophantic responses over correct ones a non-negligible
+                   fraction of the time. Optimizing model outputs against PMs
+                   also sometimes sacrifices truthfulness in favor of
+                   sycophancy. Overall, our results indicate that sycophancy is
+                   a general behavior of state-of-the-art AI assistants, likely
+                   driven in part by human preference judgments favoring
+                   sycophantic responses.",
+  month         =  oct,
+  year          =  2023,
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL"
 }
 
-@article{mo2026faithfulness,
-  title={Faithfulness vs. Safety: Evaluating {LLM} Behavior Under Counterfactual Medical Evidence},
-  author={Mo, Kaijie and Venkatayogi, Siddhartha and Shaib, Chantal and Kouzy, Ramez and Xu, Wei and Wallace, Byron C and Li, Junyi Jessy},
-  journal={arXiv preprint arXiv:2601.XXXXX},
-  year={2026},
-  note={Preprint}
+@ARTICLE{Gallifant2025-ey,
+  title     = "The {TRIPOD}-{LLM} reporting guideline for studies using large
+               language models",
+  author    = "Gallifant, Jack and Afshar, Majid and Ameen, Saleem and
+               Aphinyanaphongs, Yindalon and Chen, Shan and Cacciamani, Giovanni
+               and Demner-Fushman, Dina and Dligach, Dmitriy and Daneshjou,
+               Roxana and Fernandes, Chrystinne and Hansen, Lasse Hyldig and
+               Landman, Adam and Lehmann, Lisa and McCoy, Liam G and Miller,
+               Timothy and Moreno, Amy and Munch, Nikolaj and Restrepo, David
+               and Savova, Guergana and Umeton, Renato and Gichoya, Judy Wawira
+               and Collins, Gary S and Moons, Karel G M and Celi, Leo A and
+               Bitterman, Danielle S",
+  journal   = "Nat. Med.",
+  publisher = "Springer Science and Business Media LLC",
+  volume    =  31,
+  number    =  1,
+  pages     = "60--69",
+  abstract  = "Large language models (LLMs) are rapidly being adopted in
+               healthcare, necessitating standardized reporting guidelines. We
+               present transparent reporting of a multivariable model for
+               individual prognosis or diagnosis (TRIPOD)-LLM, an extension of
+               the TRIPOD + artificial intelligence statement, addressing the
+               unique challenges of LLMs in biomedical applications. TRIPOD-LLM
+               provides a comprehensive checklist of 19 main items and 50
+               subitems, covering key aspects from title to discussion. The
+               guidelines introduce a modular format accommodating various LLM
+               research designs and tasks, with 14 main items and 32 subitems
+               applicable across all categories. Developed through an expedited
+               Delphi process and expert consensus, TRIPOD-LLM emphasizes
+               transparency, human oversight and task-specific performance
+               reporting. We also introduce an interactive website (
+               https://tripod-llm.vercel.app/ ) facilitating easy guideline
+               completion and PDF generation for submission. As a living
+               document, TRIPOD-LLM will evolve with the field, aiming to
+               enhance the quality, reproducibility and clinical applicability
+               of LLM research in healthcare through comprehensive reporting.",
+  month     =  jan,
+  year      =  2025,
+  language  = "en"
 }
 
-@article{kouzy2025llmpatient,
-  title={Review of Large Language Models for Patient and Caregiver Support in Cancer Care Delivery},
-  author={Kouzy, Ramez and others},
-  journal={JCO Clinical Cancer Informatics},
-  volume={9},
-  pages={e2500044},
-  year={2025},
-  doi={10.1200/CCI-25-00044},
-  pmid={41213099}
+@ARTICLE{Chen2023-lr,
+  title     = "Use of artificial intelligence chatbots for cancer treatment
+               information",
+  author    = "Chen, Shan and Kann, Benjamin H and Foote, Michael B and Aerts,
+               Hugo J W L and Savova, Guergana K and Mak, Raymond H and
+               Bitterman, Danielle S",
+  journal   = "JAMA Oncol.",
+  publisher = "American Medical Association",
+  volume    =  9,
+  number    =  10,
+  pages     = "1459--1462",
+  abstract  = "This survey study examines the performance of a large language
+               model chatbot in providing cancer treatment recommendations that
+               are concordant with National Comprehensive Cancer Network
+               guidelines.",
+  month     =  oct,
+  year      =  2023,
+  keywords  = "artificial intelligence; cancer therapy; chatbots; national
+               comprehensive cancer network; large language models; guidelines",
+  language  = "en"
 }
 
-% ============================================
-% Software and Tools
-% ============================================
+@ARTICLE{Bitterman2024-my,
+  title     = "Promise and perils of large language models for cancer
+               survivorship and supportive care",
+  author    = "Bitterman, Danielle S and Downing, Andrea and Maués, Julia and
+               Lustberg, Maryam",
+  journal   = "J. Clin. Oncol.",
+  publisher = "American Society of Clinical Oncology (ASCO)",
+  volume    =  42,
+  number    =  14,
+  pages     = "1607--1611",
+  abstract  = "A call to action to bring stakeholders together to plan for the
+               future of LLM-enhanced cancer survivorship.",
+  month     =  may,
+  year      =  2024,
+  language  = "en"
+}
 
+@ARTICLE{Moreno2024-ld,
+  title     = "Toward clinical-grade evaluation of large language models",
+  author    = "Moreno, Amy C and Bitterman, Danielle S",
+  journal   = "Int. J. Radiat. Oncol. Biol. Phys.",
+  publisher = "Elsevier BV",
+  volume    =  118,
+  number    =  4,
+  pages     = "916--920",
+  month     =  mar,
+  year      =  2024,
+  language  = "en"
+}
+
+@ARTICLE{Chen2023-hw,
+  title    = "The utility of {ChatGPT} for cancer treatment information",
+  author   = "Chen, Shan and Kann, Benjamin H and Foote, Michael B and Aerts,
+              Hugo Jwl and Savova, Guergana K and Mak, Raymond H and Bitterman,
+              Danielle S",
+  journal  = "bioRxiv",
+  abstract = "The use of large language models (LLMs) such as ChatGPT for
+              medical question-answering is becoming increasingly popular.
+              However, there are concerns that these models may generate and
+              amplify medical misinformation. Because cancer patients frequently
+              seek to educate themselves through online resources, some
+              individuals will likely use ChatGPT to obtain cancer treatment
+              information. This study evaluated the performance and robustness
+              of ChatGPT in providing breast, prostate, and lung cancer
+              treatment recommendations that align with National Comprehensive
+              Cancer Network (NCCN) guidelines. Four prompt templates were
+              created to explore how differences in how the query is posed
+              impacts response. ChatGPT output was scored by 3 oncologists and a
+              4th oncologist adjudicated in cases of disagreement. ChatGPT
+              provided at least one NCCN-concordant recommendation for 102/104
+              (98\%) prompts. However, 35/102 (34.3\%) of these also included a
+              recommendation that was at least partially non-concordant with
+              NCCN guidelines. Responses varied based on prompt type. In
+              conclusion, ChatGPT did not perform well at reliably and robustly
+              providing cancer treatment recommendations. Patients and
+              clinicians should be aware of the limitations of ChatGPT and
+              similar technologies for self-education.",
+  month    =  mar,
+  year     =  2023
+}
 @manual{python310,
   title={Python Language Reference, version 3.10},
   author={{Python Software Foundation}},
-  organization={Python Software Foundation},
-  address={Wilmington, DE},
   year={2021},
   url={https://www.python.org/}
 }
@@ -432,20 +1492,18 @@
 
 @article{numpy1242,
   title={Array programming with {NumPy}},
-  author={Harris, Charles R and Millman, K Jarrod and van der Walt, Stéfan J and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J and others},
+  author={Harris, Charles R and Millman, K Jarrod and van der Walt, Stéfan J and others},
   journal={Nature},
   volume={585},
   number={7825},
   pages={357--362},
   year={2020},
-  publisher={Nature Publishing Group},
-  doi={10.1038/s41586-020-2649-2},
-  pmid={32939066}
+  doi={10.1038/s41586-020-2649-2}
 }
 
 @article{scikitlearn122,
   title={Scikit-learn: Machine learning in {Python}},
-  author={Pedregosa, Fabian and Varoquaux, Gaël and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others},
+  author={Pedregosa, Fabian and Varoquaux, Gaël and Gramfort, Alexandre and others},
   journal={Journal of Machine Learning Research},
   volume={12},
   pages={2825--2830},
